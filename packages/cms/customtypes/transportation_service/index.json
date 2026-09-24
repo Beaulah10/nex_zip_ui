@@ -1,0 +1,207 @@
+{
+	"id": "transportation_service",
+	"label": "Transportation Service",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"more_info": {
+				"type": "Text",
+				"config": {
+					"label": "More Info"
+				}
+			},
+			"duration": {
+				"type": "Text",
+				"config": {
+					"label": "Duration"
+				}
+			},
+			"add_button": {
+				"type": "Text",
+				"config": {
+					"label": "Add Button"
+				}
+			},
+			"selected_button": {
+				"type": "Text",
+				"config": {
+					"label": "Selected Button"
+				}
+			},
+			"transport_services": {
+				"type": "Text",
+				"config": {
+					"label": "Transport Services"
+				}
+			},
+			"confirm_selection": {
+				"type": "Text",
+				"config": {
+					"label": "Confirm Selection"
+				}
+			},
+			"shuttle_one_way": {
+				"type": "Text",
+				"config": {
+					"label": "Shuttle One Way"
+				}
+			},
+			"shuttle_round_trip": {
+				"type": "Text",
+				"config": {
+					"label": "Shuttle Round Trip"
+				}
+			},
+			"trolley_7_days": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley 7 Days"
+				}
+			},
+			"trolley_4_days": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley 4 Days"
+				}
+			},
+			"trolley_1_day": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley 1 Day"
+				}
+			},
+			"adult_12_years_and_older": {
+				"type": "Text",
+				"config": {
+					"label": "Adult 12 Years And Older"
+				}
+			},
+			"child_2_to_11_years_old": {
+				"type": "Text",
+				"config": {
+					"label": "Child 2 To 11 Years Old"
+				}
+			},
+			"free_for_children": {
+				"type": "Text",
+				"config": {
+					"label": "Free For Children"
+				}
+			},
+			"shuttle_service_one_way": {
+				"type": "Text",
+				"config": {
+					"label": "Shuttle Service One Way"
+				}
+			},
+			"shuttle_service_round_trip": {
+				"type": "Text",
+				"config": {
+					"label": "Shuttle Service Round Trip"
+				}
+			},
+			"trolley_service_7_days": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley Service 7 Days"
+				}
+			},
+			"trolley_service_4_days": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley Service 4 Days"
+				}
+			},
+			"trolley_service_1_day": {
+				"type": "Text",
+				"config": {
+					"label": "Trolley Service 1 Day"
+				}
+			},
+			"lealea_trolley": {
+				"type": "Text",
+				"config": {
+					"label": "Lealea Trolley"
+				}
+			},
+			"lealea_airport_shuttle": {
+				"type": "Text",
+				"config": {
+					"label": "Lealea Airport Shuttle"
+				}
+			},
+			"lealea_airport_shuttle_description": {
+				"type": "Text",
+				"config": {
+					"label": "Lealea Airport Shuttle Description"
+				}
+			},
+			"lealea_airport_shuttle_popup_description": {
+				"type": "Text",
+				"config": {
+					"label": "Lealea Airport Shuttle Popup Description"
+				}
+			},
+			"lealea_trolley_description": {
+				"type": "Text",
+				"config": {
+					"label": "Lealea Trolley Description"
+				}
+			},
+			"remaining_stock_count": {
+				"type": "Text",
+				"config": {
+					"label": "Remaining Stock Count"
+				}
+			},
+			"trip_type": {
+				"type": "Text",
+				"config": {
+					"label": "Trip Type"
+				}
+			},
+			"out_of_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Out Of Stock"
+				}
+			},
+			"no_purchase_option_available": {
+				"type": "Text",
+				"config": {
+					"label": "No Purchase Option Available"
+				}
+			}
+		},
+		"Error Labels": {
+			"exceeds_available_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Exceeds Available Stock"
+				}
+			},
+			"insufficient_stock_message": {
+				"type": "Text",
+				"config": {
+					"label": "Insufficient Stock Message"
+				}
+			}
+		},
+		"Aria Labels": {
+			"back": {
+				"type": "Text",
+				"config": {
+					"label": "Back"
+				}
+			},
+			"more_info_aria_label": {
+				"type": "Text",
+				"config": {
+					"label": "More Info Aria Label"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": [
+				{
+					"type": "heading2",
+					"text": "Shared CMS package",
+					"spans": []
+				},
+				{
+					"type": "paragraph",
+					"text": "This rich text slice is generated and maintained in packages/cms/src/slices.",
+					"spans": []
+				}
+			]
+		},
+		"items": []
+	}
+]

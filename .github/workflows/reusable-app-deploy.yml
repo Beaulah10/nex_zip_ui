@@ -1,0 +1,141 @@
+name: Reusable ECS Deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      aws_region:
+        required: true
+        type: string
+      ecr_repository:
+        required: true
+        type: string
+      ecs_cluster:
+        required: true
+        type: string
+      ecs_service:
+        required: true
+        type: string
+      task_definition_family:
+        required: true
+        type: string
+      image_tag:
+        required: true
+        type: string
+      container_name:
+        required: false
+        type: string
+        default: ''
+      aws_oidc_role_arn:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Validate deploy inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          [ -n "${{ inputs.aws_region }}" ] || { echo "Missing required input: aws_region"; exit 1; }
+          [ -n "${{ inputs.ecr_repository }}" ] || { echo "Missing required input: ecr_repository"; exit 1; }
+          [ -n "${{ inputs.ecs_cluster }}" ] || { echo "Missing required input: ecs_cluster"; exit 1; }
+          [ -n "${{ inputs.ecs_service }}" ] || { echo "Missing required input: ecs_service"; exit 1; }
+          [ -n "${{ inputs.task_definition_family }}" ] || { echo "Missing required input: task_definition_family"; exit 1; }
+          [ -n "${{ inputs.image_tag }}" ] || { echo "Missing required input: image_tag"; exit 1; }
+          [ -n "${{ inputs.aws_oidc_role_arn }}" ] || { echo "Missing required input: aws_oidc_role_arn"; exit 1; }
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ inputs.aws_oidc_role_arn }}
+          aws-region: ${{ inputs.aws_region }}
+
+      - name: Load application secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SECRET_JSON=$(
+            aws secretsmanager get-secret-value \
+              --secret-id "nexuz-ui/dev" \
+              --region "${{ inputs.aws_region }}" \
+              --query SecretString \
+              --output text
+          )
+
+          echo "$SECRET_JSON" \
+            | jq -r 'to_entries[] | "\(.key)=\(.value)"' \
+            >> "$GITHUB_ENV"
+
+      - name: Preflight ECS target validation
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SERVICE_CHECK_JSON="$(aws ecs describe-services \
+            --region "${{ inputs.aws_region }}" \
+            --cluster "${{ inputs.ecs_cluster }}" \
+            --services "${{ inputs.ecs_service }}" \
+            --output json)"
+
+          SERVICE_COUNT="$(printf '%s' "${SERVICE_CHECK_JSON}" | jq -r '.services | length')"
+          MISSING_COUNT="$(printf '%s' "${SERVICE_CHECK_JSON}" | jq -r '.failures | map(select(.reason == "MISSING")) | length')"
+
+          if [[ "${SERVICE_COUNT}" -eq 0 || "${MISSING_COUNT}" -gt 0 ]]; then
+            echo "Requested service not found in cluster."
+            echo "cluster=${{ inputs.ecs_cluster }}"
+            echo "service=${{ inputs.ecs_service }}"
+
+            echo "Available services in cluster:"
+            aws ecs list-services \
+              --region "${{ inputs.aws_region }}" \
+              --cluster "${{ inputs.ecs_cluster }}" \
+              --query 'serviceArns[]' \
+              --output text || true
+
+            exit 1
+          fi
+
+          aws ecs describe-task-definition \
+            --region "${{ inputs.aws_region }}" \
+            --task-definition "${{ inputs.task_definition_family }}" \
+            --query 'taskDefinition.taskDefinitionArn' \
+            --output text >/dev/null
+
+      - name: Deploy latest ECR image to ECS (default container)
+        if: ${{ inputs.container_name == '' }}
+        shell: bash
+        run: |
+          bash scripts/deploy-latest-ecr-to-ecs.sh \
+            --region "${{ inputs.aws_region }}" \
+            --repo "${{ inputs.ecr_repository }}" \
+            --cluster "${{ inputs.ecs_cluster }}" \
+            --service "${{ inputs.ecs_service }}" \
+            --task-family "${{ inputs.task_definition_family }}" \
+            --image-tag "${{ inputs.image_tag }}"
+
+      - name: Deploy latest ECR image to ECS (named container)
+        if: ${{ inputs.container_name != '' }}
+        shell: bash
+        run: |
+          bash scripts/deploy-latest-ecr-to-ecs.sh \
+            --region "${{ inputs.aws_region }}" \
+            --repo "${{ inputs.ecr_repository }}" \
+            --cluster "${{ inputs.ecs_cluster }}" \
+            --service "${{ inputs.ecs_service }}" \
+            --task-family "${{ inputs.task_definition_family }}" \
+            --image-tag "${{ inputs.image_tag }}" \
+            --container "${{ inputs.container_name }}"

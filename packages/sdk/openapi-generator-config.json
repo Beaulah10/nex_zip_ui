@@ -1,0 +1,10 @@
+{
+	"apiPackage": "api",
+	"modelPackage": "models",
+	"enumPropertyNaming": "camelCase",
+	"modelPropertyNaming": "original",
+	"supportsES6": true,
+	"typescriptThreePlus": true,
+	"withInterfaces": true,
+	"withSeparateModelsAndApi": true
+}

@@ -1,0 +1,246 @@
+name: Reusable CI
+
+on:
+  workflow_call:
+    secrets:
+      # Optional: falls back to pnpm audit if not provided (Guideline 6.2.2)
+      NEXUZ_SNYK_TOKEN:
+        required: false
+      ACCESSIBILITY_API_KEY:
+        required: false
+    inputs:
+      app_name:
+        required: true
+        type: string
+      app_path:
+        required: true
+        type: string
+      run_tests:
+        required: false
+        type: boolean
+        default: true
+      run_e2e_flows:
+        required: false
+        type: boolean
+        default: false
+      aws_region:
+        required: false
+        type: string
+        default: ""
+      aws_oidc_role_arn:
+        required: false
+        type: string
+        default: ""
+      aws_account_id:
+        required: false
+        type: string
+        default: ""
+      aws_codeartifact_domain:
+        required: false
+        type: string
+        default: ""
+      aws_codeartifact_repository:
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  ci:
+    name: "Quality Gate (Install / Lint / Format / Type Check / Test / Accessibility)"
+    runs-on: ubuntu-latest
+    env:
+      TURBO_TELEMETRY_DISABLED: "1"
+      ACCESSIBILITY_API_KEY: ${{ secrets.ACCESSIBILITY_API_KEY }}
+      ACCESSIBILITY_KEY_AVAILABLE: ${{ secrets.ACCESSIBILITY_API_KEY != '' }}
+      SNYK_TOKEN_AVAILABLE: ${{ secrets.NEXUZ_SNYK_TOKEN != '' }}
+    permissions:
+      contents: read
+      packages: read
+      pull-requests: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 9.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: "pnpm"
+
+      - name: Configure AWS credentials (OIDC)
+        if: ${{ inputs.aws_oidc_role_arn != '' && inputs.aws_region != '' }}
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ inputs.aws_oidc_role_arn }}
+          aws-region: ${{ inputs.aws_region }}
+
+      - name: Configure npm for AWS CodeArtifact
+        if: ${{ inputs.aws_codeartifact_domain != '' && inputs.aws_codeartifact_repository != '' && inputs.aws_account_id != '' && inputs.aws_region != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          REGISTRY_HOST="${{ inputs.aws_codeartifact_domain }}-${{ inputs.aws_account_id }}.d.codeartifact.${{ inputs.aws_region }}.amazonaws.com"
+          REGISTRY_PATH="npm/${{ inputs.aws_codeartifact_repository }}/"
+
+          CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token \
+            --domain "${{ inputs.aws_codeartifact_domain }}" \
+            --domain-owner "${{ inputs.aws_account_id }}" \
+            --region "${{ inputs.aws_region }}" \
+            --query authorizationToken \
+            --output text)
+
+          echo "//${REGISTRY_HOST}/${REGISTRY_PATH}:_authToken=${CODEARTIFACT_AUTH_TOKEN}" >> ~/.npmrc
+          echo "@nexuz:registry=https://${REGISTRY_HOST}/${REGISTRY_PATH}" >> ~/.npmrc
+          echo "//${REGISTRY_HOST}/${REGISTRY_PATH}:always-auth=true" >> ~/.npmrc
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      # Guideline 6.2.2 / 7.2.1: Blocking scan, pinned version (no continue-on-error, no @master).
+      - name: Run Snyk Open Source Scan
+        if: env.SNYK_TOKEN_AVAILABLE == 'true'
+        uses: snyk/actions/node@v1.0.0
+        env:
+          SNYK_TOKEN: ${{ secrets.NEXUZ_SNYK_TOKEN }}
+        with:
+          command: test
+          args: --all-projects --severity-threshold=high
+
+      # Guideline 6.2.2: Fallback scan when Snyk token is unavailable.
+      - name: Run pnpm Audit (Fallback)
+        if: env.SNYK_TOKEN_AVAILABLE != 'true'
+        run: pnpm audit --audit-level=high
+                    
+      - name: Run Axe Linter
+        if: env.ACCESSIBILITY_KEY_AVAILABLE == 'true'
+        uses: dequelabs/axe-linter-action@v2.0.0
+        with:
+          api_key: ${{ secrets.ACCESSIBILITY_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Format check
+        run: pnpm check
+
+      - name: Lint and type check
+        run: pnpm turbo run lint check-types --filter=${{ inputs.app_name }}...
+
+      - name: Run tests with coverage
+        if: ${{ inputs.run_tests }}
+        run: pnpm turbo run test:coverage --filter=${{ inputs.app_name }}...
+
+      - name: Install Playwright browsers
+        if: ${{ inputs.run_e2e_flows }}
+        run: pnpm --dir e2e exec playwright install --with-deps chromium
+
+      - name: Run booking flows
+        if: ${{ inputs.run_e2e_flows }}
+        run: pnpm --dir e2e test:flows
+
+      - name: Upload Playwright flows report
+        if: ${{ inputs.run_e2e_flows && always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-flows-report
+          path: |
+            e2e/playwright-report
+            e2e/test-results
+          if-no-files-found: ignore
+
+      - name: Publish coverage summary
+        if: ${{ inputs.run_tests }}
+        shell: bash
+        run: |
+          COVERAGE_THRESHOLD=80
+          COVERAGE_FILE=$(find . -name coverage-summary.json | head -n 1)
+
+          if [ -f "$COVERAGE_FILE" ]; then
+            LINES=$(jq '.total.lines.pct' "$COVERAGE_FILE")
+            FUNCTIONS=$(jq '.total.functions.pct' "$COVERAGE_FILE")
+            BRANCHES=$(jq '.total.branches.pct' "$COVERAGE_FILE")
+            STATEMENTS=$(jq '.total.statements.pct' "$COVERAGE_FILE")
+
+            {
+              echo "# Vitest Coverage Report"
+              echo ""
+              echo "## Summary"
+              echo ""
+              echo "- Lines: **${LINES}%**"
+              echo "- Functions: **${FUNCTIONS}%**"
+              echo "- Branches: **${BRANCHES}%**"
+              echo "- Statements: **${STATEMENTS}%**"
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            if [ "$(printf '%.0f' "$LINES")" -lt "$COVERAGE_THRESHOLD" ]; then
+              echo "Coverage threshold of ${COVERAGE_THRESHOLD}% was not met." >&2
+              exit 1
+            fi
+          fi
+
+      - name: Publish Playwright flows summary
+        if: ${{ inputs.run_e2e_flows && always() }}
+        shell: bash
+        run: |
+          REPORT_FILE="e2e/playwright-report/results.json"
+
+          if [ -f "$REPORT_FILE" ]; then
+            node -e '
+              const fs = require("fs");
+              const reportPath = process.argv[1];
+              const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+              const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+
+              const counts = { total: 0, passed: 0, failed: 0, skipped: 0, timedOut: 0 };
+              const durations = [];
+
+              function walkSuite(suite) {
+                for (const spec of suite.specs ?? []) {
+                  for (const test of spec.tests ?? []) {
+                    counts.total += 1;
+                    let finalStatus = "unknown";
+
+                    for (const result of test.results ?? []) {
+                      if (typeof result.duration === "number") durations.push(result.duration);
+                      if (result.status && result.status !== "interrupted") {
+                        finalStatus = result.status;
+                      }
+                    }
+
+                    if (finalStatus === "passed") counts.passed += 1;
+                    else if (finalStatus === "skipped") counts.skipped += 1;
+                    else if (finalStatus === "timedOut") counts.timedOut += 1;
+                    else counts.failed += 1;
+                  }
+                }
+
+                for (const child of suite.suites ?? []) walkSuite(child);
+              }
+
+              for (const suite of report.suites ?? []) walkSuite(suite);
+
+              const totalDurationMs = durations.reduce((sum, value) => sum + value, 0);
+              const seconds = (totalDurationMs / 1000).toFixed(1);
+
+              const lines = [
+                "# Playwright E2E Report",
+                "",
+                "## Summary",
+                "",
+                `- Test Files: ${report.suites?.length ?? 0} root suites`,
+                `- Test Results: ${counts.passed} passed / ${counts.total} total`,
+                `- Failed: ${counts.failed}`,
+                `- Skipped: ${counts.skipped}`,
+                `- Timed out: ${counts.timedOut}`,
+                `- Aggregate duration: ${seconds}s`,
+              ];
+
+              fs.appendFileSync(summaryPath, `${lines.join("\n")}\n`);
+            ' "$REPORT_FILE"
+          fi

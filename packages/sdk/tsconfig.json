@@ -1,0 +1,10 @@
+{
+	"extends": "../typescript-config/base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "ESNext",
+		"moduleResolution": "Bundler"
+	},
+	"include": ["index.ts", "request-auth.ts", "sdk-client.ts", "error/**/*.ts"],
+	"exclude": ["node_modules", "swagger/**/*"]
+}

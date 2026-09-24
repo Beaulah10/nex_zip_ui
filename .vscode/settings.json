@@ -1,0 +1,67 @@
+{
+	// Format & fix using Biome
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "always",
+		"source.fixAll.eslint": "always",
+		"source.organizeImports": "never"
+	},
+
+	// ESLint — only activates in workspaces that have an eslint config (e.g. packages/ui)
+	"eslint.enable": true,
+	"prettier.enable": false,
+
+	// Editor basics
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+
+	// TypeScript
+	"js/ts.tsdk.path": "node_modules/typescript/lib",
+	"js/ts.preferences.importModuleSpecifier": "non-relative",
+
+	// Improve monorepo performance
+	"files.exclude": {
+		"**/.next": true,
+		"**/dist": true,
+		"**/build": true,
+		"**/.turbo": true
+	},
+
+	// Search & Performance
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/.next": true,
+		"**/.turbo": true,
+		"**/dist": true
+	},
+
+	// Line endings
+	"files.eol": "\n",
+
+	// Tailwind CSS IntelliSense — enable class detection inside utility functions
+	"tailwindCSS.experimental.classRegex": [
+		["cn\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"],
+		["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"],
+		["cva\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"],
+		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"],
+		["twMerge\\(([^)]*)\\)", "(?:'|\"|`)([^'\"`]*)(?:'|\"|`)"]
+	],
+
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
+}

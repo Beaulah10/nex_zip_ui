@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		// Biome — formatting, linting, import sorting for all workspaces
+		"biomejs.biome",
+
+		// Tailwind CSS IntelliSense — autocomplete, hover docs, class sorting preview
+		"bradlc.vscode-tailwindcss",
+
+		// ESLint — linting for packages/apps that use ESLint alongside Biome
+		"dbaeumer.vscode-eslint"
+	]
+}

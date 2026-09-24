@@ -1,0 +1,26 @@
+{
+	"extends": "@repo/typescript-config/nextjs.json",
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"strictNullChecks": true,
+		"paths": {
+			"@/*": ["./*"]
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"next-env.d.ts",
+		"next.config.js",
+		".next/types/**/*.ts",
+		"modules/utils/helpers/customer-information/mrz-utils",
+		"components/customer-information/customer-information-modal/special-notes/assistance-section/requesting-assistance/requesting-assistance.test.tsxx",
+
+		"vitest.d.ts"
+	],
+	"exclude": ["node_modules"]
+}

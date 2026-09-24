@@ -1,0 +1,321 @@
+{
+	"id": "baggage_service",
+	"label": "Baggage Service",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"title_baggage_services": {
+				"type": "Text",
+				"config": {
+					"label": "Title Baggage Services"
+				}
+			},
+			"baggage_total_amount": {
+				"type": "Text",
+				"config": {
+					"label": "Baggage Total Amount"
+				}
+			},
+			"baggage_confirm_selection": {
+				"type": "Text",
+				"config": {
+					"label": "Baggage Confirm Selection"
+				}
+			},
+			"passenger_list_carry_on_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger List Carry On Baggage"
+				}
+			},
+			"select_carry_on_baggage_7kg": {
+				"type": "Text",
+				"config": {
+					"label": "Select Carry On Baggage 7kg"
+				}
+			},
+			"select_carry_on_baggage_15kg": {
+				"type": "Text",
+				"config": {
+					"label": "Select Carry On Baggage 15kg"
+				}
+			},
+			"passenger_list_checked_in_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger List Checked In Baggage"
+				}
+			},
+			"passenger_list_sports_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger List Sports Equipment"
+				}
+			},
+			"select_checked_in_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Select Checked In Baggage"
+				}
+			},
+			"select_checked_in_baggages": {
+				"type": "Text",
+				"config": {
+					"label": "Select Checked In Baggages"
+				}
+			},
+			"baggage_selection_carry_on_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Baggage Selection Carry On Baggage"
+				}
+			},
+			"baggage_selection_checked_in_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Baggage Selection Checked In Baggage"
+				}
+			},
+			"baggage_selection_sports_equipments": {
+				"type": "Text",
+				"config": {
+					"label": "Baggage Selection Sports Equipments"
+				}
+			},
+			"select_sports_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Select Sports Equipment"
+				}
+			},
+			"label_carry_on_label_7_kg": {
+				"type": "Text",
+				"config": {
+					"label": "Label Carry On Label 7 Kg"
+				}
+			},
+			"label_carry_on_label_15_kg": {
+				"type": "Text",
+				"config": {
+					"label": "Label Carry On Label 15 Kg"
+				}
+			},
+			"add_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Add Baggage"
+				}
+			},
+			"current_number": {
+				"type": "Text",
+				"config": {
+					"label": "Current Number"
+				}
+			},
+			"max_checked_in_baggage_info": {
+				"type": "Text",
+				"config": {
+					"label": "Max Checked In Baggage Info"
+				}
+			},
+			"selected_items": {
+				"type": "Text",
+				"config": {
+					"label": "Selected Items"
+				}
+			},
+			"label_ski_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Label Ski Equipment"
+				}
+			},
+			"label_golf": {
+				"type": "Text",
+				"config": {
+					"label": "Label Golf"
+				}
+			},
+			"label_bicycle_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Label Bicycle Equipment"
+				}
+			},
+			"label_surfboard_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Label Surfboard Equipment"
+				}
+			},
+			"label_surfboard_equipment_large": {
+				"type": "Text",
+				"config": {
+					"label": "Label Surfboard Equipment Large"
+				}
+			},
+			"label_snow_board": {
+				"type": "Text",
+				"config": {
+					"label": "Label Snow Board"
+				}
+			},
+			"label_value": {
+				"type": "Text",
+				"config": {
+					"label": "Label Value"
+				}
+			},
+			"label_premium": {
+				"type": "Text",
+				"config": {
+					"label": "Label Premium"
+				}
+			},
+			"label_flexbiz": {
+				"type": "Text",
+				"config": {
+					"label": "Label Flexbiz"
+				}
+			},
+			"label_nobundle": {
+				"type": "Text",
+				"config": {
+					"label": "Label Nobundle"
+				}
+			},
+			"button_ok": {
+				"type": "Text",
+				"config": {
+					"label": "Button Ok"
+				}
+			},
+			"segment_mismatch_dialog_description": {
+				"type": "Text",
+				"config": {
+					"label": "Segment Mismatch Dialog Description"
+				}
+			},
+			"dialog_title_out_of_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Title Out Of Stock"
+				}
+			},
+			"dialog_description_out_of_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Description Out Of Stock"
+				}
+			},
+			"button_return_to_top": {
+				"type": "Text",
+				"config": {
+					"label": "Button Return To Top"
+				}
+			},
+			"remaining_available_stocks": {
+				"type": "Text",
+				"config": {
+					"label": "Remaining Available Stocks"
+				}
+			}
+		},
+		"Error Labels": {
+			"error_max_checked_in_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Error Max Checked In Baggage"
+				}
+			},
+			"error_title_exceeds_available_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Error Title Exceeds Available Stock"
+				}
+			},
+			"error_description_out_of_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Error Description Out Of Stock"
+				}
+			},
+			"error_description_limited_stock": {
+				"type": "Text",
+				"config": {
+					"label": "Error Description Limited Stock"
+				}
+			},
+			"error_title_segment_mismatch": {
+				"type": "Text",
+				"config": {
+					"label": "Error Title Segment Mismatch"
+				}
+			},
+			"error_description_segment_mismatch": {
+				"type": "Text",
+				"config": {
+					"label": "Error Description Segment Mismatch"
+				}
+			}
+		},
+		"Aria Labels": {
+			"label_back": {
+				"type": "Text",
+				"config": {
+					"label": "Label Back"
+				}
+			},
+			"label_decrease_quantity": {
+				"type": "Text",
+				"config": {
+					"label": "Label Decrease Quantity"
+				}
+			},
+			"label_increase_quantity": {
+				"type": "Text",
+				"config": {
+					"label": "Label Increase Quantity"
+				}
+			},
+			"label_quantity": {
+				"type": "Text",
+				"config": {
+					"label": "Label Quantity"
+				}
+			},
+			"selected_amount": {
+				"type": "Text",
+				"config": {
+					"label": "Selected Amount"
+				}
+			},
+			"carry_on_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Carry On Baggage"
+				}
+			},
+			"checked_in_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Checked In Baggage"
+				}
+			},
+			"sports_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Sports Equipment"
+				}
+			},
+			"passenger_baggage_card": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Baggage Card"
+				}
+			}
+		}
+	}
+}

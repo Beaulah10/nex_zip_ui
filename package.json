@@ -1,0 +1,46 @@
+{
+	"name": "nexuz-ui",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"prepare": "lefthook install",
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"check:fix:unsafe": "biome check --write --unsafe .",
+		"check-types": "turbo run check-types",
+		"prismic:types:generate": "pnpm --filter @repo/cms prismic:types:generate",
+		"prismic:models:generate": "pnpm --filter @repo/cms prismic:models:generate",
+		"prismic:seed": "pnpm --filter @repo/cms prismic:seed",
+		"prismic:seed:dry": "pnpm --filter @repo/cms prismic:seed:dry",
+		"prismic:validate": "pnpm --filter @repo/cms prismic:validate",
+		"prismic:check": "pnpm --filter @repo/cms prismic:models:generate && pnpm --filter @repo/cms prismic:validate",
+		"test": "turbo run test",
+		"test:coverage": "turbo run test:coverage",
+		"ci:local": "pnpm check && pnpm turbo run lint check-types"
+	},
+	"pnpm": {
+		"overrides": {
+			"fast-uri": "3.1.7"
+		}
+	},
+	"devDependencies": {
+		"@axe-core/cli": "^4.12.1",
+		"@axe-core/react": "^4.12.1",
+		"axe-core": "^4.12.1",
+		"@biomejs/biome": "2.4.13",
+		"chokidar-cli": "^3.0.0",
+		"concurrently": "^10.0.3",
+		"dotenv-cli": "^8.0.0",
+		"lefthook": "^2.1.6",
+		"tsx": "^4.22.4",
+		"turbo": "^2.9.7",
+		"typescript": "5.9.2"
+	},
+	"packageManager": "pnpm@9.0.0",
+	"engines": {
+		"node": ">=20.9.0"
+	}
+}

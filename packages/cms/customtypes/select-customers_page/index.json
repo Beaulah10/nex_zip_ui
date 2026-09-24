@@ -1,0 +1,47 @@
+{
+	"id": "select-customers_page",
+	"label": "Select-Customers Page",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "Title"
+				}
+			},
+			"adult_label": {
+				"type": "Text",
+				"config": {
+					"label": "Adult Label"
+				}
+			},
+			"childA_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildA Label"
+				}
+			},
+			"childB_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildB Label"
+				}
+			},
+			"childC_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildC Label"
+				}
+			},
+			"infant_label": {
+				"type": "Text",
+				"config": {
+					"label": "Infant Label"
+				}
+			}
+		}
+	}
+}

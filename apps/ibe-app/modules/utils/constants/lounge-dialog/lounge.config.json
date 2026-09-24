@@ -1,0 +1,52 @@
+{
+	"lounges": [
+		{
+			"title": "Narita Airport Paid Lounge",
+			"openingHours": "[Opening hours] 07:30 AM - 21:00 PM",
+			"amenities": [
+				{ "icon": "room_service", "label": "Meals" },
+				{ "icon": "local_bar", "label": "Drinks" },
+				{ "icon": "wifi", "label": "Wi-fi" },
+				{ "icon": "wc", "label": "Toilets" },
+				{ "icon": "shower", "label": "Shower" }
+			],
+			"description": "Business Hours: 07:30-21:00. Fare: 9200 JPY. Fare Notes: Children under 2 years old are free. The above rates apply to purchases made on or after July 1, 2026. Basic Services: Meals, Drinks (soft drinks, alcohol), Free Wi-Fi, Toilet facilities, Shower facilities. Service Notes: Food and beverages cannot be brought into the lounge. Additional options cannot be purchased directly at the lounge reception. Guests cannot stay beyond the lounge closing time. How To Use: Present the receipt for the lounge coupon purchased from ZIPAIR. Print the receipt in advance if needed. Applicable Routes: Bangkok, Singapore, Honolulu, Los Angeles, San Jose, San Francisco, Vancouver."
+		},
+		{
+			"title": "Honolulu Airport Paid Lounge",
+			"openingHours": "[Opening hours] 07:00 AM - ZIPAIR Departure Time",
+			"amenities": [
+				{ "icon": "room_service", "label": "Meals" },
+				{ "icon": "fastfood", "label": "Snacks" },
+				{ "icon": "liquor", "label": "Alcohol" },
+				{ "icon": "local_cafe", "label": "Coffee" },
+				{ "icon": "wifi", "label": "Wi-fi" }
+			],
+			"description": "Business Hours: 07:00-ZIPAIR Departure Time.Fare: 38 USD.Fare Notes: Free for children under 1 year old.Basic Services: Light Meals & Snacks (Cup noodles, chips, nuts, pound cake), Alcohol (Hawaiian craft beer, wine, shochu), Soft drinks, Coffee & Tea, Free Wi-Fi.Service Notes: The types of food and beverages are subject to change. When the flight is full, the service may not be available. In that case, a meal coupon will be provided.How To Use: Present the receipt for the lounge coupon purchased from ZIPAIR. Print the receipt in advance if needed.Applicable Routes: None."
+		},
+		{
+			"title": "Bangkok Airport Paid Lounge",
+			"openingHours": "[Opening hours] 24 Hours",
+			"amenities": [
+				{ "icon": "room_service", "label": "Meals" },
+				{ "icon": "local_bar", "label": "Drinks" },
+				{ "icon": "shower", "label": "Shower" },
+				{ "icon": "wc", "label": "Toilets" },
+				{ "icon": "wifi", "label": "Wi-fi" }
+			],
+			"description": "Business Hours: 24 Hours.Business Hours Notes: You can enter the lounge three hours before the departure time.Fare: 980 THB.Fare Notes: Children under 2 years old are free.Basic Services: Meals, Drinks (alcoholic and non-alcoholic), Showers, Toilets, Free Wi-Fi.How To Use: Collect your invitation card at the check-in counter. Present your invitation card when entering the lounge.Applicable Routes: None."
+		},
+		{
+			"title": "Singapore Airport Paid Lounge",
+			"openingHours": "[Opening hours] 24 Hours",
+			"amenities": [
+				{ "icon": "room_service", "label": "Meals" },
+				{ "icon": "local_bar", "label": "Drinks" },
+				{ "icon": "shower", "label": "Shower" },
+				{ "icon": "wc", "label": "Toilets" },
+				{ "icon": "wifi", "label": "Wi-fi" }
+			],
+			"description": "Business Hours: 24 Hours.Business Hours Notes: You can enter the lounge three hours before the departure time.Fare: 52 SGD.Fare Notes: Year-round pricing.Basic Services: Meals, Drinks (alcoholic and non-alcoholic), Showers, Toilets, Free Wi-Fi.How To Use: Collect your invitation card at the check-in counter. Present your invitation card when entering the lounge.Applicable Routes: None."
+		}
+	]
+}

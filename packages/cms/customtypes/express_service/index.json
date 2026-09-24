@@ -1,0 +1,107 @@
+{
+	"id": "express_service",
+	"label": "Express Service",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"express_title": {
+				"type": "Text",
+				"config": {
+					"label": "Express Title"
+				}
+			},
+			"express_dialog_title": {
+				"type": "Text",
+				"config": {
+					"label": "Express Dialog Title"
+				}
+			},
+			"express_bullet_1": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 1"
+				}
+			},
+			"express_bullet_2": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 2"
+				}
+			},
+			"express_bullet_3": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 3"
+				}
+			},
+			"express_bullet_4": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 4"
+				}
+			},
+			"express_bullet_5": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 5"
+				}
+			},
+			"express_bullet_6": {
+				"type": "Text",
+				"config": {
+					"label": "Express Bullet 6"
+				}
+			},
+			"express_note": {
+				"type": "Text",
+				"config": {
+					"label": "Express Note"
+				}
+			},
+			"express_confirm": {
+				"type": "Text",
+				"config": {
+					"label": "Express Confirm"
+				}
+			},
+			"remaining_stocks_label": {
+				"type": "Text",
+				"config": {
+					"label": "Remaining Stocks Label"
+				}
+			},
+			"out_of_stock_message": {
+				"type": "Text",
+				"config": {
+					"label": "Out Of Stock Message"
+				}
+			},
+			"express_warning_title": {
+				"type": "Text",
+				"config": {
+					"label": "Express Warning Title"
+				}
+			},
+			"express_warning_message1": {
+				"type": "Text",
+				"config": {
+					"label": "Express Warning Message1"
+				}
+			},
+			"express_warning_message2": {
+				"type": "Text",
+				"config": {
+					"label": "Express Warning Message2"
+				}
+			},
+			"total_amount_label": {
+				"type": "Text",
+				"config": {
+					"label": "Total Amount Label"
+				}
+			}
+		}
+	}
+}

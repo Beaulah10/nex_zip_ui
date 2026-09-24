@@ -1,0 +1,112 @@
+{
+	"$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
+	"root": false,
+	"extends": "//",
+	"linter": {
+		"rules": {
+			"a11y": {
+				"recommended": true,
+				"noNoninteractiveElementToInteractiveRole": "error",
+				"noRedundantRoles": "warn",
+				"useAltText": "error",
+				"useAnchorContent": "error",
+				"useButtonType": "error",
+				"useKeyWithClickEvents": "error",
+				"useSemanticElements": "warn"
+			},
+			"correctness": {
+				"noUnusedVariables": "error",
+				"noUnusedImports": "error"
+			},
+			"security": {
+				"noDangerouslySetInnerHtmlWithChildren": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "warn",
+				"noCommentText": "error",
+				"noExtraNonNullAssertion": "error",
+				"noConsole": "warn",
+				"noDebugger": "error"
+			},
+			"performance": {
+				"noDelete": "warn"
+			},
+			"complexity": {
+				"noExtraBooleanCast": "warn",
+				"noForEach": "warn"
+			},
+			"style": {
+				"useConst": "error",
+				"useTemplate": "warn",
+				"useFragmentSyntax": "warn"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"fix": "safe",
+					"options": {
+						"attributes": ["className"],
+						"functions": ["cn", "clsx", "cva", "cx", "twMerge"]
+					}
+				}
+			}
+		}
+	},
+	"javascript": {
+		"globals": ["React", "JSX", "window", "document", "navigator", "process"],
+		"jsxRuntime": "transparent",
+		"formatter": {
+			"quoteStyle": "double",
+			"trailingCommas": "es5",
+			"semicolons": "always"
+		}
+	},
+	"json": {
+		"formatter": {
+			"indentStyle": "tab"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		},
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab",
+			"lineWidth": 100,
+			"quoteStyle": "double"
+		},
+		"linter": {
+			"enabled": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": [
+				"**/*.test.ts",
+				"**/*.test.tsx",
+				"**/*.spec.ts",
+				"**/*.spec.tsx",
+				"**/__tests__/**"
+			],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noConsole": "off",
+						"noExplicitAny": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["*.config.ts", "*.config.js", "*.config.mjs", "*.config.cjs"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUnusedVariables": "warn"
+					}
+				}
+			}
+		}
+	]
+}

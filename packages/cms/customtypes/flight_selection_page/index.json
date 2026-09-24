@@ -1,0 +1,639 @@
+{
+	"id": "flight_selection_page",
+	"label": "Flight Selection Page",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"system_error_title": {
+				"type": "Text",
+				"config": {
+					"label": "System Error Title"
+				}
+			},
+			"error_description": {
+				"type": "Text",
+				"config": {
+					"label": "Error Description"
+				}
+			},
+			"error_reload": {
+				"type": "Text",
+				"config": {
+					"label": "Error Reload"
+				}
+			},
+			"connecting_flight_label": {
+				"type": "Text",
+				"config": {
+					"label": "Connecting Flight Label"
+				}
+			},
+			"connecting_flight1_label": {
+				"type": "Text",
+				"config": {
+					"label": "Connecting Flight1 Label"
+				}
+			},
+			"flight_selection_error_label": {
+				"type": "Text",
+				"config": {
+					"label": "Flight Selection Error Label"
+				}
+			},
+			"no_available_flights_label": {
+				"type": "Text",
+				"config": {
+					"label": "No Available Flights Label"
+				}
+			},
+			"standard_cabin_label": {
+				"type": "Text",
+				"config": {
+					"label": "Standard Cabin Label"
+				}
+			},
+			"zip_full_flat_label": {
+				"type": "Text",
+				"config": {
+					"label": "Zip Full Flat Label"
+				}
+			},
+			"cabin_legend_info_text": {
+				"type": "Text",
+				"config": {
+					"label": "Cabin Legend Info Text"
+				}
+			},
+			"cabin_legend_link_text": {
+				"type": "Text",
+				"config": {
+					"label": "Cabin Legend Link Text"
+				}
+			},
+			"adult_label": {
+				"type": "Text",
+				"config": {
+					"label": "Adult Label"
+				}
+			},
+			"seat_left_label": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Left Label"
+				}
+			},
+			"disabled_cabin_info_message": {
+				"type": "Text",
+				"config": {
+					"label": "Disabled Cabin Info Message"
+				}
+			},
+			"childA_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildA Label"
+				}
+			},
+			"childB_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildB Label"
+				}
+			},
+			"childC_label": {
+				"type": "Text",
+				"config": {
+					"label": "ChildC Label"
+				}
+			},
+			"infant_label": {
+				"type": "Text",
+				"config": {
+					"label": "Infant Label"
+				}
+			},
+			"emergency_support_dialog_title": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Support Dialog Title"
+				}
+			},
+			"emergency_support_dialog_description": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Support Dialog Description"
+				}
+			},
+			"close_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Close Button Label"
+				}
+			},
+			"agree_and_proceed_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Agree And Proceed Button Label"
+				}
+			},
+			"segment_label": {
+				"type": "Text",
+				"config": {
+					"label": "Segment Label"
+				}
+			},
+			"child_2_6_years_label": {
+				"type": "Text",
+				"config": {
+					"label": "Child 2 6 Years Label"
+				}
+			},
+			"child_7_11_years_label": {
+				"type": "Text",
+				"config": {
+					"label": "Child 7 11 Years Label"
+				}
+			},
+			"child_label": {
+				"type": "Text",
+				"config": {
+					"label": "Child Label"
+				}
+			},
+			"infant_0_1_year_label": {
+				"type": "Text",
+				"config": {
+					"label": "Infant 0 1 Year Label"
+				}
+			},
+			"zip_full_flat_restriction_message": {
+				"type": "Text",
+				"config": {
+					"label": "Zip Full Flat Restriction Message"
+				}
+			},
+			"transit_label": {
+				"type": "Text",
+				"config": {
+					"label": "Transit Label"
+				}
+			},
+			"total_hours_label": {
+				"type": "Text",
+				"config": {
+					"label": "Total Hours Label"
+				}
+			},
+			"previous_day_indicator_label": {
+				"type": "Text",
+				"config": {
+					"label": "Previous Day Indicator Label"
+				}
+			},
+			"next_day_indicator_label": {
+				"type": "Text",
+				"config": {
+					"label": "Next Day Indicator Label"
+				}
+			},
+			"flight_page_title": {
+				"type": "Text",
+				"config": {
+					"label": "Flight Page Title"
+				}
+			},
+			"date_selection_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Date Selection Button Label"
+				}
+			},
+			"calendar_dialog_title": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Dialog Title"
+				}
+			},
+			"month_january": {
+				"type": "Text",
+				"config": {
+					"label": "Month January"
+				}
+			},
+			"month_february": {
+				"type": "Text",
+				"config": {
+					"label": "Month February"
+				}
+			},
+			"month_march": {
+				"type": "Text",
+				"config": {
+					"label": "Month March"
+				}
+			},
+			"month_april": {
+				"type": "Text",
+				"config": {
+					"label": "Month April"
+				}
+			},
+			"month_may": {
+				"type": "Text",
+				"config": {
+					"label": "Month May"
+				}
+			},
+			"month_june": {
+				"type": "Text",
+				"config": {
+					"label": "Month June"
+				}
+			},
+			"month_july": {
+				"type": "Text",
+				"config": {
+					"label": "Month July"
+				}
+			},
+			"month_august": {
+				"type": "Text",
+				"config": {
+					"label": "Month August"
+				}
+			},
+			"month_september": {
+				"type": "Text",
+				"config": {
+					"label": "Month September"
+				}
+			},
+			"month_october": {
+				"type": "Text",
+				"config": {
+					"label": "Month October"
+				}
+			},
+			"month_november": {
+				"type": "Text",
+				"config": {
+					"label": "Month November"
+				}
+			},
+			"month_december": {
+				"type": "Text",
+				"config": {
+					"label": "Month December"
+				}
+			},
+			"calendar_day_initial_sunday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Sunday"
+				}
+			},
+			"calendar_day_initial_monday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Monday"
+				}
+			},
+			"calendar_day_initial_tuesday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Tuesday"
+				}
+			},
+			"calendar_day_initial_wednesday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Wednesday"
+				}
+			},
+			"calendar_day_initial_thursday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Thursday"
+				}
+			},
+			"calendar_day_initial_friday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Friday"
+				}
+			},
+			"calendar_day_initial_saturday": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Day Initial Saturday"
+				}
+			},
+			"calendar_close_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Close Button Label"
+				}
+			},
+			"calendar_return_date_error_message": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Return Date Error Message"
+				}
+			},
+			"calendar_travel_dates_error": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Travel Dates Error"
+				}
+			},
+			"calendar_child_alert_message": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Child Alert Message"
+				}
+			},
+			"calendar_legend_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Button Label"
+				}
+			},
+			"calendar_tab_outbound": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Tab Outbound"
+				}
+			},
+			"calendar_tab_return": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Tab Return"
+				}
+			},
+			"calendar_previous_month_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Previous Month Label"
+				}
+			},
+			"calendar_next_month_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Next Month Label"
+				}
+			},
+			"calendar_legend_title": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Title"
+				}
+			},
+			"calendar_legend_close_button_aria_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Close Button Aria Label"
+				}
+			},
+			"calendar_legend_available": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Available"
+				}
+			},
+			"calendar_legend_promo": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Promo"
+				}
+			},
+			"calendar_legend_alt_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Alt Seat"
+				}
+			},
+			"calendar_legend_unavailable": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Unavailable"
+				}
+			},
+			"calendar_legend_past": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Past"
+				}
+			},
+			"calendar_legend_preview_day": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Preview Day"
+				}
+			},
+			"calendar_legend_preview_available_price": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Preview Available Price"
+				}
+			},
+			"calendar_legend_preview_promo_original_price": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Preview Promo Original Price"
+				}
+			},
+			"calendar_legend_preview_promo_price": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Preview Promo Price"
+				}
+			},
+			"calendar_legend_preview_alt_seat_placeholder": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Legend Preview Alt Seat Placeholder"
+				}
+			},
+			"calendar_footer_notice1": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Footer Notice1"
+				}
+			},
+			"calendar_footer_notice2": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Footer Notice2"
+				}
+			},
+			"calendar_footer_reset_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Footer Reset Button Label"
+				}
+			},
+			"calendar_footer_confirm_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Footer Confirm Button Label"
+				}
+			},
+			"outbound_label": {
+				"type": "Text",
+				"config": {
+					"label": "Outbound Label"
+				}
+			},
+			"inbound_label": {
+				"type": "Text",
+				"config": {
+					"label": "Inbound Label"
+				}
+			},
+			"no_return_flight_label": {
+				"type": "Text",
+				"config": {
+					"label": "No Return Flight Label"
+				}
+			},
+			"one_way_ticket_message": {
+				"type": "Text",
+				"config": {
+					"label": "One Way Ticket Message"
+				}
+			},
+			"add_return_flight_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Add Return Flight Button Label"
+				}
+			},
+			"airfare_not_guaranteed_message": {
+				"type": "Text",
+				"config": {
+					"label": "Airfare Not Guaranteed Message"
+				}
+			},
+			"check_in_baggage_fee_message": {
+				"type": "Text",
+				"config": {
+					"label": "Check In Baggage Fee Message"
+				}
+			},
+			"fare_restrictions_message": {
+				"type": "Text",
+				"config": {
+					"label": "Fare Restrictions Message"
+				}
+			},
+			"total_amount_label": {
+				"type": "Text",
+				"config": {
+					"label": "Total Amount Label"
+				}
+			},
+			"no_available_seats_message": {
+				"type": "Text",
+				"config": {
+					"label": "No Available Seats Message"
+				}
+			},
+			"segment_selection_error_label": {
+				"type": "Text",
+				"config": {
+					"label": "Segment Selection Error Label"
+				}
+			},
+			"proceed_to_enter_customer_info_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Proceed To Enter Customer Info Button Label"
+				}
+			},
+			"alt_seat_img": {
+				"type": "Text",
+				"config": {
+					"label": "Alt Seat Img"
+				}
+			},
+			"via_label_connectingflight": {
+				"type": "Text",
+				"config": {
+					"label": "Via Label Connectingflight"
+				}
+			},
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "Title"
+				}
+			}
+		},
+		"Error Titles": {
+			"NEXUZR003E001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR003E001"
+				}
+			},
+			"NEXUZR003E002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR003E002"
+				}
+			},
+			"NEXUZR003E003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR003E003"
+				}
+			},
+			"NEXUZCMNE001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE001"
+				}
+			},
+			"NEXUZCMNE002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE002"
+				}
+			},
+			"NEXUZCMNE003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE003"
+				}
+			}
+		},
+		"Date Reset Dialog": {
+			"date_title": {
+				"type": "Text",
+				"config": {
+					"label": "Date Title"
+				}
+			},
+			"date_description": {
+				"type": "Text",
+				"config": {
+					"label": "Date Description"
+				}
+			},
+			"button_cancel": {
+				"type": "Text",
+				"config": {
+					"label": "Button Cancel"
+				}
+			},
+			"button_confirm": {
+				"type": "Text",
+				"config": {
+					"label": "Button Confirm"
+				}
+			}
+		}
+	}
+}
