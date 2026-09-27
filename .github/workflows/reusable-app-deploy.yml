@@ -58,7 +58,7 @@ jobs:
           [ -n "${{ inputs.aws_oidc_role_arn }}" ] || { echo "Missing required input: aws_oidc_role_arn"; exit 1; }
 
       - name: Configure AWS credentials (OIDC)
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ inputs.aws_oidc_role_arn }}
           aws-region: ${{ inputs.aws_region }}
