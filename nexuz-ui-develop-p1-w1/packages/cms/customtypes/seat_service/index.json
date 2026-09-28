@@ -1,0 +1,645 @@
+{
+	"id": "seat_service",
+	"label": "Seat Service",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"seat_selection": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection"
+				}
+			},
+			"system_error_title": {
+				"type": "Text",
+				"config": {
+					"label": "System Error Title"
+				}
+			},
+			"emergency_exit": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Exit"
+				}
+			},
+			"total_amount": {
+				"type": "Text",
+				"config": {
+					"label": "Total Amount"
+				}
+			},
+			"confirm_selection": {
+				"type": "Text",
+				"config": {
+					"label": "Confirm Selection"
+				}
+			},
+			"back": {
+				"type": "Text",
+				"config": {
+					"label": "Back"
+				}
+			},
+			"close": {
+				"type": "Text",
+				"config": {
+					"label": "Close"
+				}
+			},
+			"passengers": {
+				"type": "Text",
+				"config": {
+					"label": "Passengers"
+				}
+			},
+			"adjacent_seat_information": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Seat Information"
+				}
+			},
+			"standard_seat_area": {
+				"type": "Text",
+				"config": {
+					"label": "Standard Seat Area"
+				}
+			},
+			"bundle_info_message": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Info Message"
+				}
+			},
+			"emergency_exit_seat_confirmation": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Exit Seat Confirmation"
+				}
+			},
+			"agree_and_select": {
+				"type": "Text",
+				"config": {
+					"label": "Agree And Select"
+				}
+			},
+			"eligibility_title": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Title"
+				}
+			},
+			"eligibility_description": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Description"
+				}
+			},
+			"crew_instruction_intro": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Intro"
+				}
+			},
+			"eligibility_footer": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Footer"
+				}
+			},
+			"authority_name": {
+				"type": "Text",
+				"config": {
+					"label": "Authority Name"
+				}
+			},
+			"service_unavailable_title": {
+				"type": "Text",
+				"config": {
+					"label": "Service Unavailable Title"
+				}
+			},
+			"service_unavailable_description": {
+				"type": "Text",
+				"config": {
+					"label": "Service Unavailable Description"
+				}
+			},
+			"bundle_labels_no_bundle": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Labels No Bundle"
+				}
+			},
+			"bundle_labels_value": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Labels Value"
+				}
+			},
+			"bundle_labels_premium": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Labels Premium"
+				}
+			},
+			"bundle_labels_flex_biz": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Labels Flex Biz"
+				}
+			},
+			"business_cabin_columns_a": {
+				"type": "Text",
+				"config": {
+					"label": "Business Cabin Columns A"
+				}
+			},
+			"business_cabin_columns_d": {
+				"type": "Text",
+				"config": {
+					"label": "Business Cabin Columns D"
+				}
+			},
+			"business_cabin_columns_g": {
+				"type": "Text",
+				"config": {
+					"label": "Business Cabin Columns G"
+				}
+			},
+			"business_cabin_columns_k": {
+				"type": "Text",
+				"config": {
+					"label": "Business Cabin Columns K"
+				}
+			},
+			"seat_legend_more_legroom": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend More Legroom"
+				}
+			},
+			"seat_legend_front_aisle_window_side": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Front Aisle Window Side"
+				}
+			},
+			"seat_legend_reclining_not_allowed": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Reclining Not Allowed"
+				}
+			},
+			"seat_legend_rear_aisle_window_side": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Rear Aisle Window Side"
+				}
+			},
+			"seat_legend_central_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Central Seat"
+				}
+			},
+			"seat_legend_zip_full_flat_central_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Zip Full Flat Central Seat"
+				}
+			},
+			"seat_legend_selected": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Selected"
+				}
+			},
+			"seat_legend_not_selectable": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Legend Not Selectable"
+				}
+			},
+			"adjacent_info_zip_full_flat_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Zip Full Flat Item 1"
+				}
+			},
+			"adjacent_info_zip_full_flat_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Zip Full Flat Item 2"
+				}
+			},
+			"adjacent_info_zip_full_flat_item_3": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Zip Full Flat Item 3"
+				}
+			},
+			"adjacent_info_guidance_link_text": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Guidance Link Text"
+				}
+			},
+			"adjacent_info_standard_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Standard Item 1"
+				}
+			},
+			"adjacent_info_standard_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Standard Item 2"
+				}
+			},
+			"adjacent_info_standard_item_3": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Standard Item 3"
+				}
+			},
+			"adjacent_info_standard_vancouver_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Standard Vancouver Item 1"
+				}
+			},
+			"adjacent_info_standard_vancouver_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Info Standard Vancouver Item 2"
+				}
+			},
+			"seat_rules_zip_full_flat_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Zip Full Flat Item 1"
+				}
+			},
+			"seat_rules_standard_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Standard Item 1"
+				}
+			},
+			"seat_rules_standard_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Standard Item 2"
+				}
+			},
+			"seat_rules_standard_item_3": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Standard Item 3"
+				}
+			},
+			"seat_rules_standard_item_4": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Standard Item 4"
+				}
+			},
+			"seat_rules_standard_item_5": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Rules Standard Item 5"
+				}
+			},
+			"eligibility_checklist_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 1"
+				}
+			},
+			"eligibility_checklist_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 2"
+				}
+			},
+			"eligibility_checklist_item_3": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 3"
+				}
+			},
+			"eligibility_checklist_item_4": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 4"
+				}
+			},
+			"eligibility_checklist_item_5": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 5"
+				}
+			},
+			"eligibility_checklist_item_6": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 6"
+				}
+			},
+			"eligibility_checklist_item_7": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 7"
+				}
+			},
+			"eligibility_checklist_item_8": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 8"
+				}
+			},
+			"eligibility_checklist_item_9": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 9"
+				}
+			},
+			"eligibility_checklist_item_10": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 10"
+				}
+			},
+			"eligibility_checklist_item_11": {
+				"type": "Text",
+				"config": {
+					"label": "Eligibility Checklist Item 11"
+				}
+			},
+			"crew_instruction_items_item_1": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Items Item 1"
+				}
+			},
+			"crew_instruction_items_item_2": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Items Item 2"
+				}
+			},
+			"crew_instruction_items_item_3": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Items Item 3"
+				}
+			},
+			"crew_instruction_items_item_4": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Items Item 4"
+				}
+			},
+			"crew_instruction_items_item_5": {
+				"type": "Text",
+				"config": {
+					"label": "Crew Instruction Items Item 5"
+				}
+			},
+			"seat_selection_summary_selected_single": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection Summary Selected Single"
+				}
+			},
+			"seat_selection_summary_selected_multiple": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection Summary Selected Multiple"
+				}
+			},
+			"seat_selection_summary_required_single": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection Summary Required Single"
+				}
+			},
+			"seat_selection_summary_required_multiple": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection Summary Required Multiple"
+				}
+			},
+			"seat_selection_summary_all_selected": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection Summary All Selected"
+				}
+			}
+		},
+		"Error Labels": {
+			"checklist_required": {
+				"type": "Text",
+				"config": {
+					"label": "Checklist Required"
+				}
+			},
+			"cant_select_seat_title": {
+				"type": "Text",
+				"config": {
+					"label": "Cant Select Seat Title"
+				}
+			},
+			"cant_select_seat_body": {
+				"type": "Text",
+				"config": {
+					"label": "Cant Select Seat Body"
+				}
+			},
+			"emergency_exit_title": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Exit Title"
+				}
+			},
+			"emergency_exit_body": {
+				"type": "Text",
+				"config": {
+					"label": "Emergency Exit Body"
+				}
+			},
+			"seat_selection_48_hour_title": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection 48 Hour Title"
+				}
+			},
+			"seat_selection_48_hour_body": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Selection 48 Hour Body"
+				}
+			},
+			"bundle_mandatory_title": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Mandatory Title"
+				}
+			},
+			"adjacent_free_seat_mandatory_body": {
+				"type": "Text",
+				"config": {
+					"label": "Adjacent Free Seat Mandatory Body"
+				}
+			},
+			"bundle_mandatory_body": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Mandatory Body"
+				}
+			},
+			"non_reclining_title": {
+				"type": "Text",
+				"config": {
+					"label": "Non Reclining Title"
+				}
+			},
+			"non_reclining_body": {
+				"type": "Text",
+				"config": {
+					"label": "Non Reclining Body"
+				}
+			},
+			"limited_reclining_title": {
+				"type": "Text",
+				"config": {
+					"label": "Limited Reclining Title"
+				}
+			},
+			"limited_reclining_body": {
+				"type": "Text",
+				"config": {
+					"label": "Limited Reclining Body"
+				}
+			},
+			"no_available_seats_title": {
+				"type": "Text",
+				"config": {
+					"label": "No Available Seats Title"
+				}
+			},
+			"no_available_seats_content": {
+				"type": "Text",
+				"config": {
+					"label": "No Available Seats Content"
+				}
+			},
+			"no_available_seats_button": {
+				"type": "Text",
+				"config": {
+					"label": "No Available Seats Button"
+				}
+			},
+			"no_adjacent_seats_title": {
+				"type": "Text",
+				"config": {
+					"label": "No Adjacent Seats Title"
+				}
+			},
+			"no_adjacent_seats_content": {
+				"type": "Text",
+				"config": {
+					"label": "No Adjacent Seats Content"
+				}
+			},
+			"no_adjacent_seats_button": {
+				"type": "Text",
+				"config": {
+					"label": "No Adjacent Seats Button"
+				}
+			},
+			"cancelled_selection_title": {
+				"type": "Text",
+				"config": {
+					"label": "Cancelled Selection Title"
+				}
+			},
+			"cancelled_selection_content_line_1": {
+				"type": "Text",
+				"config": {
+					"label": "Cancelled Selection Content Line 1"
+				}
+			},
+			"cancelled_selection_content_line_2": {
+				"type": "Text",
+				"config": {
+					"label": "Cancelled Selection Content Line 2"
+				}
+			},
+			"cancelled_selection_ok_button": {
+				"type": "Text",
+				"config": {
+					"label": "Cancelled Selection Ok Button"
+				}
+			},
+			"NEXUZR004E051": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR004E051"
+				}
+			},
+			"NEXUZCMNE001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE001"
+				}
+			},
+			"NEXUZCMNE002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE002"
+				}
+			},
+			"NEXUZCMNE003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE003"
+				}
+			},
+			"NEXUZCMNE004": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE004"
+				}
+			}
+		},
+		"Aria Labels": {
+			"back_button": {
+				"type": "Text",
+				"config": {
+					"label": "Back Button"
+				}
+			},
+			"close_button": {
+				"type": "Text",
+				"config": {
+					"label": "Close Button"
+				}
+			},
+			"seat_number": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Number"
+				}
+			},
+			"selected_state": {
+				"type": "Text",
+				"config": {
+					"label": "Selected State"
+				}
+			}
+		}
+	}
+}

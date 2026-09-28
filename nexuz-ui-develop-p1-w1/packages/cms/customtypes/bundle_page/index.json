@@ -1,0 +1,477 @@
+{
+	"id": "bundle_page",
+	"label": "Bundle Page",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"stage_labels_outbound": {
+				"type": "Text",
+				"config": {
+					"label": "Stage Labels Outbound"
+				}
+			},
+			"stage_labels_inbound": {
+				"type": "Text",
+				"config": {
+					"label": "Stage Labels Inbound"
+				}
+			},
+			"stage_labels_segment1": {
+				"type": "Text",
+				"config": {
+					"label": "Stage Labels Segment1"
+				}
+			},
+			"stage_labels_segment2": {
+				"type": "Text",
+				"config": {
+					"label": "Stage Labels Segment2"
+				}
+			},
+			"bundle_names_no_bundle": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Names No Bundle"
+				}
+			},
+			"bundle_names_flex_biz": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Names Flex Biz"
+				}
+			},
+			"bundle_names_premium": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Names Premium"
+				}
+			},
+			"bundle_names_value": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Names Value"
+				}
+			},
+			"bundle_options_no_bundle_description_line_1": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options No Bundle Description Line 1"
+				}
+			},
+			"bundle_options_no_bundle_description_line_2": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options No Bundle Description Line 2"
+				}
+			},
+			"bundle_options_flex_biz_description_line_1": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options Flex Biz Description Line 1"
+				}
+			},
+			"bundle_options_value_description_line_1": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options Value Description Line 1"
+				}
+			},
+			"bundle_options_premium_description_line_1": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options Premium Description Line 1"
+				}
+			},
+			"bundle_options_most_popular_badge": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Options Most Popular Badge"
+				}
+			},
+			"bundle_features_feature": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Feature"
+				}
+			},
+			"bundle_features_view_features": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features View Features"
+				}
+			},
+			"bundle_features_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Seat"
+				}
+			},
+			"bundle_features_seat_no_bundle": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Seat No Bundle"
+				}
+			},
+			"bundle_features_seat_no_bundle_not_included": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Seat No Bundle Not Included"
+				}
+			},
+			"bundle_features_seat_included": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Seat Included"
+				}
+			},
+			"bundle_features_meal": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Meal"
+				}
+			},
+			"bundle_features_included": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Included"
+				}
+			},
+			"bundle_features_carry_on": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Carry On"
+				}
+			},
+			"bundle_features_carry_on_no_bundle": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Carry On No Bundle"
+				}
+			},
+			"bundle_features_carry_on_flex_biz": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Carry On Flex Biz"
+				}
+			},
+			"bundle_features_carry_on_premium": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Carry On Premium"
+				}
+			},
+			"bundle_features_carry_on_value": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Carry On Value"
+				}
+			},
+			"bundle_features_checked_baggage": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Checked Baggage"
+				}
+			},
+			"bundle_features_refund": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Refund"
+				}
+			},
+			"bundle_features_amenities": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Amenities"
+				}
+			},
+			"bundle_features_wifi": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Wifi"
+				}
+			},
+			"bundle_features_free": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Features Free"
+				}
+			},
+			"bundle_selection_title": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Selection Title"
+				}
+			},
+			"bundle_section_helper_sports_equipment": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Section Helper Sports Equipment"
+				}
+			},
+			"bundle_section_helper_preferred_piece": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Section Helper Preferred Piece"
+				}
+			},
+			"bundle_section_helper_service_package": {
+				"type": "Text",
+				"config": {
+					"label": "Bundle Section Helper Service Package"
+				}
+			},
+			"booking_footer_total_amount": {
+				"type": "Text",
+				"config": {
+					"label": "Booking Footer Total Amount"
+				}
+			},
+			"booking_footer_proceed": {
+				"type": "Text",
+				"config": {
+					"label": "Booking Footer Proceed"
+				}
+			},
+			"selection_table_apply_to_all": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Apply To All"
+				}
+			},
+			"selection_table_bundle_selection_unavailable": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Bundle Selection Unavailable"
+				}
+			},
+			"selection_table_only_no_bundle_available_for_these_passengers": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Only No Bundle Available For These Passengers"
+				}
+			},
+			"selection_table_passenger": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Passenger"
+				}
+			},
+			"selection_table_passengers": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Passengers"
+				}
+			},
+			"selection_table_other_passengers": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Other Passengers"
+				}
+			},
+			"selection_table_other_passengers_one": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Other Passengers One"
+				}
+			},
+			"selection_table_other_passengers_many": {
+				"type": "Text",
+				"config": {
+					"label": "Selection Table Other Passengers Many"
+				}
+			},
+			"alerts_no_bundles_available_title": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts No Bundles Available Title"
+				}
+			},
+			"alerts_no_bundles_available_description": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts No Bundles Available Description"
+				}
+			},
+			"alerts_deadline_title": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Deadline Title"
+				}
+			},
+			"alerts_deadline_description": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Deadline Description"
+				}
+			},
+			"alerts_out_of_stock_title": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Out Of Stock Title"
+				}
+			},
+			"alerts_out_of_stock_description": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Out Of Stock Description"
+				}
+			},
+			"alerts_limited_title": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Limited Title"
+				}
+			},
+			"alerts_limited_description_apply_to_all": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Limited Description Apply To All"
+				}
+			},
+			"alerts_limited_description_other": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Limited Description Other"
+				}
+			},
+			"alerts_unavailable_banner_title": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Unavailable Banner Title"
+				}
+			},
+			"alerts_unavailable_banner_description": {
+				"type": "Text",
+				"config": {
+					"label": "Alerts Unavailable Banner Description"
+				}
+			},
+			"dialog_trigger": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Trigger"
+				}
+			},
+			"dialog_title": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Title"
+				}
+			},
+			"dialog_bullet_1": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Bullet 1"
+				}
+			},
+			"dialog_bullet_2": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Bullet 2"
+				}
+			},
+			"dialog_learn_more": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Learn More"
+				}
+			},
+			"dialog_close": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Close"
+				}
+			},
+			"dialog_confirm": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Confirm"
+				}
+			}
+		},
+		"Error Labels": {
+			"NEXUZCMNE001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE001"
+				}
+			},
+			"NEXUZCMNE002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE002"
+				}
+			},
+			"NEXUZCMNE003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE003"
+				}
+			},
+			"NEXUZR004E001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR004E001"
+				}
+			},
+			"NEXUZR004E002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR004E002"
+				}
+			},
+			"NEXUZCMNE004": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE004"
+				}
+			},
+			"NEXUZR004E003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR004E003"
+				}
+			},
+			"select_any_bundle_to_proceed": {
+				"type": "Text",
+				"config": {
+					"label": "Select Any Bundle To Proceed"
+				}
+			},
+			"select_bundle_for_passengers": {
+				"type": "Text",
+				"config": {
+					"label": "Select Bundle For Passengers"
+				}
+			}
+		},
+		"Aria Labels": {
+			"collapse_information": {
+				"type": "Text",
+				"config": {
+					"label": "Collapse Information"
+				}
+			},
+			"expand_information": {
+				"type": "Text",
+				"config": {
+					"label": "Expand Information"
+				}
+			},
+			"select_bundle_for_all_travellers": {
+				"type": "Text",
+				"config": {
+					"label": "Select Bundle For All Travellers"
+				}
+			},
+			"no_bundle": {
+				"type": "Text",
+				"config": {
+					"label": "No Bundle"
+				}
+			}
+		}
+	}
+}

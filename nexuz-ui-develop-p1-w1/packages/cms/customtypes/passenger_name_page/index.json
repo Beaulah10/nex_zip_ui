@@ -1,0 +1,161 @@
+{
+	"id": "passenger_name_page",
+	"label": "Passenger Name Page",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"min_length": {
+				"type": "Text",
+				"config": {
+					"label": "Min Length"
+				}
+			},
+			"max_length": {
+				"type": "Text",
+				"config": {
+					"label": "Max Length"
+				}
+			},
+			"uppercase_alpha": {
+				"type": "Text",
+				"config": {
+					"label": "Uppercase Alpha"
+				}
+			},
+			"accompany_adult": {
+				"type": "Text",
+				"config": {
+					"label": "Accompany Adult"
+				}
+			},
+			"confirm_button": {
+				"type": "Text",
+				"config": {
+					"label": "Confirm Button"
+				}
+			},
+			"passenger_name": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Name"
+				}
+			},
+			"passenger_select": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Select"
+				}
+			},
+			"input_error": {
+				"type": "Text",
+				"config": {
+					"label": "Input Error"
+				}
+			},
+			"global_error": {
+				"type": "Text",
+				"config": {
+					"label": "Global Error"
+				}
+			},
+			"last_name": {
+				"type": "Text",
+				"config": {
+					"label": "Last Name"
+				}
+			},
+			"required_label": {
+				"type": "Text",
+				"config": {
+					"label": "Required Label"
+				}
+			},
+			"first_name": {
+				"type": "Text",
+				"config": {
+					"label": "First Name"
+				}
+			},
+			"accompanying_adult": {
+				"type": "Text",
+				"config": {
+					"label": "Accompanying Adult"
+				}
+			},
+			"placeholder_select": {
+				"type": "Text",
+				"config": {
+					"label": "Placeholder Select"
+				}
+			},
+			"placeholder_last_name": {
+				"type": "Text",
+				"config": {
+					"label": "Placeholder Last Name"
+				}
+			},
+			"adult_passenger": {
+				"type": "Text",
+				"config": {
+					"label": "Adult Passenger"
+				}
+			},
+			"adult_age": {
+				"type": "Text",
+				"config": {
+					"label": "Adult Age"
+				}
+			},
+			"child_passenger": {
+				"type": "Text",
+				"config": {
+					"label": "Child Passenger"
+				}
+			},
+			"older_child_age": {
+				"type": "Text",
+				"config": {
+					"label": "Older Child Age"
+				}
+			},
+			"child_age": {
+				"type": "Text",
+				"config": {
+					"label": "Child Age"
+				}
+			},
+			"younger_child_age": {
+				"type": "Text",
+				"config": {
+					"label": "Younger Child Age"
+				}
+			},
+			"infant_passenger": {
+				"type": "Text",
+				"config": {
+					"label": "Infant Passenger"
+				}
+			},
+			"infant_age": {
+				"type": "Text",
+				"config": {
+					"label": "Infant Age"
+				}
+			},
+			"title_label": {
+				"type": "Text",
+				"config": {
+					"label": "Title Label"
+				}
+			},
+			"total_amount_label": {
+				"type": "Text",
+				"config": {
+					"label": "Total Amount Label"
+				}
+			}
+		}
+	}
+}

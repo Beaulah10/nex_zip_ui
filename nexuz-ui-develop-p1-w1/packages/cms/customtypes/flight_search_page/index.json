@@ -1,0 +1,864 @@
+{
+	"id": "flight_search_page",
+	"label": "Flight Search Page",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"label_promocode": {
+				"type": "Text",
+				"config": {
+					"label": "Label Promocode"
+				}
+			},
+			"label_search": {
+				"type": "Text",
+				"config": {
+					"label": "Label Search"
+				}
+			},
+			"system_error_title": {
+				"type": "Text",
+				"config": {
+					"label": "System Error Title"
+				}
+			},
+			"airports": {
+				"type": "Group",
+				"config": {
+					"label": "Airports",
+					"repeat": true,
+					"fields": {
+						"iata_code": {
+							"type": "Text",
+							"config": {
+								"label": "Iata Code"
+							}
+						},
+						"airport": {
+							"type": "Text",
+							"config": {
+								"label": "Airport"
+							}
+						},
+						"city": {
+							"type": "Text",
+							"config": {
+								"label": "City"
+							}
+						},
+						"country": {
+							"type": "Text",
+							"config": {
+								"label": "Country"
+							}
+						},
+						"display_order": {
+							"type": "Text",
+							"config": {
+								"label": "Display Order"
+							}
+						}
+					}
+				}
+			},
+			"error_description": {
+				"type": "Text",
+				"config": {
+					"label": "Error Description"
+				}
+			},
+			"error_reload": {
+				"type": "Text",
+				"config": {
+					"label": "Error Reload"
+				}
+			},
+			"label_round_trip": {
+				"type": "Text",
+				"config": {
+					"label": "Label Round Trip"
+				}
+			},
+			"label_one_way": {
+				"type": "Text",
+				"config": {
+					"label": "Label One Way"
+				}
+			},
+			"placeholder_departure": {
+				"type": "Text",
+				"config": {
+					"label": "Placeholder Departure"
+				}
+			},
+			"placeholder_arrival": {
+				"type": "Text",
+				"config": {
+					"label": "Placeholder Arrival"
+				}
+			},
+			"placeholder_promotion_code": {
+				"type": "Text",
+				"config": {
+					"label": "Placeholder Promotion Code"
+				}
+			},
+			"departure_modal_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Departure Modal Heading"
+				}
+			},
+			"arrival_modal_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Arrival Modal Heading"
+				}
+			}
+		},
+		"Error Titles": {
+			"NEXUZR002E050": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR002E050"
+				}
+			},
+			"NEXUZR002E051": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR002E051"
+				}
+			},
+			"NEXUZR002E052": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR002E052"
+				}
+			},
+			"NEXUZCMNE001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE001"
+				}
+			},
+			"NEXUZCMNE002": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE002"
+				}
+			},
+			"NEXUZCMNE003": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZCMNE003"
+				}
+			},
+			"NEXUZR001E001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR001E001"
+				}
+			},
+			"NEXUZR002E001": {
+				"type": "Text",
+				"config": {
+					"label": "NEXUZR002E001"
+				}
+			}
+		},
+		"Validation": {
+			"max_passengers_error": {
+				"type": "Text",
+				"config": {
+					"label": "Max Passengers Error"
+				}
+			},
+			"infant_per_adult_error": {
+				"type": "Text",
+				"config": {
+					"label": "Infant Per Adult Error"
+				}
+			},
+			"child_infant_per_adult_error": {
+				"type": "Text",
+				"config": {
+					"label": "Child Infant Per Adult Error"
+				}
+			},
+			"combined_children_per_adult_error": {
+				"type": "Text",
+				"config": {
+					"label": "Combined Children Per Adult Error"
+				}
+			},
+			"combined_infant_per_adult_error": {
+				"type": "Text",
+				"config": {
+					"label": "Combined Infant Per Adult Error"
+				}
+			},
+			"vancouver_route_error": {
+				"type": "Text",
+				"config": {
+					"label": "Vancouver Route Error"
+				}
+			},
+			"validation_travel_dates_error": {
+				"type": "Text",
+				"config": {
+					"label": "Validation Travel Dates Error"
+				}
+			},
+			"passenger_error_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Error Heading"
+				}
+			},
+			"origin_required": {
+				"type": "Text",
+				"config": {
+					"label": "Origin Required"
+				}
+			},
+			"destination_required": {
+				"type": "Text",
+				"config": {
+					"label": "Destination Required"
+				}
+			},
+			"promotion_code_max": {
+				"type": "Text",
+				"config": {
+					"label": "Promotion Code Max"
+				}
+			},
+			"promotion_code_pattern": {
+				"type": "Text",
+				"config": {
+					"label": "Promotion Code Pattern"
+				}
+			}
+		},
+		"Promo Code": {
+			"label_enter_code": {
+				"type": "Text",
+				"config": {
+					"label": "Label Enter Code"
+				}
+			}
+		},
+		"Menu Item": {
+			"via_tokyo_narita": {
+				"type": "Text",
+				"config": {
+					"label": "Via Tokyo Narita"
+				}
+			}
+		},
+		"Location Section": {
+			"default_origin_title": {
+				"type": "Text",
+				"config": {
+					"label": "Default Origin Title"
+				}
+			},
+			"default_origin_subtitle": {
+				"type": "Text",
+				"config": {
+					"label": "Default Origin Subtitle"
+				}
+			},
+			"default_arrival_title": {
+				"type": "Text",
+				"config": {
+					"label": "Default Arrival Title"
+				}
+			},
+			"error_select_arrival": {
+				"type": "Text",
+				"config": {
+					"label": "Error Select Arrival"
+				}
+			}
+		},
+		"Tooltip": {
+			"arrival_not_selected": {
+				"type": "Text",
+				"config": {
+					"label": "Arrival Not Selected"
+				}
+			},
+			"arrival_selected": {
+				"type": "Text",
+				"config": {
+					"label": "Arrival Selected"
+				}
+			},
+			"departure_selected": {
+				"type": "Text",
+				"config": {
+					"label": "Departure Selected"
+				}
+			}
+		},
+		"Passenger Modal": {
+			"passenger_modal_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Modal Heading"
+				}
+			},
+			"header_title": {
+				"type": "Text",
+				"config": {
+					"label": "Header Title"
+				}
+			},
+			"summary_single": {
+				"type": "Text",
+				"config": {
+					"label": "Summary Single"
+				}
+			},
+			"summary_multiple": {
+				"type": "Text",
+				"config": {
+					"label": "Summary Multiple"
+				}
+			},
+			"error_multiple": {
+				"type": "Text",
+				"config": {
+					"label": "Error Multiple"
+				}
+			},
+			"label_adult": {
+				"type": "Text",
+				"config": {
+					"label": "Label Adult"
+				}
+			},
+			"description_adult": {
+				"type": "Text",
+				"config": {
+					"label": "Description Adult"
+				}
+			},
+			"label_child_infant": {
+				"type": "Text",
+				"config": {
+					"label": "Label Child Infant"
+				}
+			},
+			"label_child_12_14": {
+				"type": "Text",
+				"config": {
+					"label": "Label Child 12 14"
+				}
+			},
+			"label_child_7_11": {
+				"type": "Text",
+				"config": {
+					"label": "Label Child 7 11"
+				}
+			},
+			"label_child_2_6": {
+				"type": "Text",
+				"config": {
+					"label": "Label Child 2 6"
+				}
+			},
+			"label_infant_0_1": {
+				"type": "Text",
+				"config": {
+					"label": "Label Infant 0 1"
+				}
+			},
+			"description_infant_0_1": {
+				"type": "Text",
+				"config": {
+					"label": "Description Infant 0 1"
+				}
+			},
+			"button_confirm_selection": {
+				"type": "Text",
+				"config": {
+					"label": "Button Confirm Selection"
+				}
+			},
+			"passenger_modal_bullet1": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Modal Bullet1"
+				}
+			},
+			"passenger_modal_bullet2": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Modal Bullet2"
+				}
+			},
+			"passenger_modal_bullet3": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Modal Bullet3"
+				}
+			},
+			"passenger_modal_bullet4": {
+				"type": "Text",
+				"config": {
+					"label": "Passenger Modal Bullet4"
+				}
+			},
+			"link_assistance": {
+				"type": "Text",
+				"config": {
+					"label": "Link Assistance"
+				}
+			},
+			"link_faq": {
+				"type": "Text",
+				"config": {
+					"label": "Link Faq"
+				}
+			}
+		},
+		"Child Alert": {
+			"child_alert_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Heading"
+				}
+			},
+			"child_alert_bullet1": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Bullet1"
+				}
+			},
+			"child_alert_bullet2": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Bullet2"
+				}
+			},
+			"child_alert_bullet3": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Bullet3"
+				}
+			},
+			"child_alert_bullet4": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Bullet4"
+				}
+			},
+			"button_child_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Button Child Seat"
+				}
+			},
+			"button_contact_center": {
+				"type": "Text",
+				"config": {
+					"label": "Button Contact Center"
+				}
+			}
+		},
+		"Date Reset Dialog": {
+			"date_title": {
+				"type": "Text",
+				"config": {
+					"label": "Date Title"
+				}
+			},
+			"date_description": {
+				"type": "Text",
+				"config": {
+					"label": "Date Description"
+				}
+			},
+			"date_reset_dialog_button_cancel": {
+				"type": "Text",
+				"config": {
+					"label": "Date Reset Dialog Button Cancel"
+				}
+			},
+			"button_confirm": {
+				"type": "Text",
+				"config": {
+					"label": "Button Confirm"
+				}
+			}
+		},
+		"Passport Modal": {
+			"passport_modal_heading": {
+				"type": "Text",
+				"config": {
+					"label": "Passport Modal Heading"
+				}
+			},
+			"header_description": {
+				"type": "Text",
+				"config": {
+					"label": "Header Description"
+				}
+			},
+			"item_passport_number": {
+				"type": "Text",
+				"config": {
+					"label": "Item Passport Number"
+				}
+			},
+			"item_expiry_date": {
+				"type": "Text",
+				"config": {
+					"label": "Item Expiry Date"
+				}
+			},
+			"note_travel_period": {
+				"type": "Text",
+				"config": {
+					"label": "Note Travel Period"
+				}
+			},
+			"item_date_of_birth": {
+				"type": "Text",
+				"config": {
+					"label": "Item Date Of Birth"
+				}
+			},
+			"item_nationality_region": {
+				"type": "Text",
+				"config": {
+					"label": "Item Nationality Region"
+				}
+			},
+			"passport_modal_button_cancel": {
+				"type": "Text",
+				"config": {
+					"label": "Passport Modal Button Cancel"
+				}
+			},
+			"button_next": {
+				"type": "Text",
+				"config": {
+					"label": "Button Next"
+				}
+			}
+		},
+		"Calendar": {
+			"trigger_label": {
+				"type": "Text",
+				"config": {
+					"label": "Trigger Label"
+				}
+			},
+			"no_travel_date_tooltip": {
+				"type": "Text",
+				"config": {
+					"label": "No Travel Date Tooltip"
+				}
+			},
+			"dialog_title": {
+				"type": "Text",
+				"config": {
+					"label": "Dialog Title"
+				}
+			},
+			"close_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Close Button Label"
+				}
+			},
+			"legend_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Legend Button Label"
+				}
+			},
+			"legend_title": {
+				"type": "Text",
+				"config": {
+					"label": "Legend Title"
+				}
+			},
+			"legend_close_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Legend Close Button Label"
+				}
+			},
+			"legend_close_button_aria_label": {
+				"type": "Text",
+				"config": {
+					"label": "Legend Close Button Aria Label"
+				}
+			},
+			"child_alert_message": {
+				"type": "Text",
+				"config": {
+					"label": "Child Alert Message"
+				}
+			},
+			"return_date_error_message": {
+				"type": "Text",
+				"config": {
+					"label": "Return Date Error Message"
+				}
+			},
+			"calendar_travel_dates_error": {
+				"type": "Text",
+				"config": {
+					"label": "Calendar Travel Dates Error"
+				}
+			},
+			"seat_type_label": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Type Label"
+				}
+			},
+			"seat_type_standard": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Type Standard"
+				}
+			},
+			"seat_type_zip": {
+				"type": "Text",
+				"config": {
+					"label": "Seat Type Zip"
+				}
+			},
+			"tab_outbound": {
+				"type": "Text",
+				"config": {
+					"label": "Tab Outbound"
+				}
+			},
+			"tab_return": {
+				"type": "Text",
+				"config": {
+					"label": "Tab Return"
+				}
+			},
+			"previous_month_label": {
+				"type": "Text",
+				"config": {
+					"label": "Previous Month Label"
+				}
+			},
+			"next_month_label": {
+				"type": "Text",
+				"config": {
+					"label": "Next Month Label"
+				}
+			},
+			"day_initial_sunday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Sunday"
+				}
+			},
+			"day_initial_monday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Monday"
+				}
+			},
+			"day_initial_tuesday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Tuesday"
+				}
+			},
+			"day_initial_wednesday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Wednesday"
+				}
+			},
+			"day_initial_thursday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Thursday"
+				}
+			},
+			"day_initial_friday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Friday"
+				}
+			},
+			"day_initial_saturday": {
+				"type": "Text",
+				"config": {
+					"label": "Day Initial Saturday"
+				}
+			},
+			"month_january": {
+				"type": "Text",
+				"config": {
+					"label": "Month January"
+				}
+			},
+			"month_february": {
+				"type": "Text",
+				"config": {
+					"label": "Month February"
+				}
+			},
+			"month_march": {
+				"type": "Text",
+				"config": {
+					"label": "Month March"
+				}
+			},
+			"month_april": {
+				"type": "Text",
+				"config": {
+					"label": "Month April"
+				}
+			},
+			"month_may": {
+				"type": "Text",
+				"config": {
+					"label": "Month May"
+				}
+			},
+			"month_june": {
+				"type": "Text",
+				"config": {
+					"label": "Month June"
+				}
+			},
+			"month_july": {
+				"type": "Text",
+				"config": {
+					"label": "Month July"
+				}
+			},
+			"month_august": {
+				"type": "Text",
+				"config": {
+					"label": "Month August"
+				}
+			},
+			"month_september": {
+				"type": "Text",
+				"config": {
+					"label": "Month September"
+				}
+			},
+			"month_october": {
+				"type": "Text",
+				"config": {
+					"label": "Month October"
+				}
+			},
+			"month_november": {
+				"type": "Text",
+				"config": {
+					"label": "Month November"
+				}
+			},
+			"month_december": {
+				"type": "Text",
+				"config": {
+					"label": "Month December"
+				}
+			},
+			"preview_day": {
+				"type": "Text",
+				"config": {
+					"label": "Preview Day"
+				}
+			},
+			"preview_available_price": {
+				"type": "Text",
+				"config": {
+					"label": "Preview Available Price"
+				}
+			},
+			"preview_promo_original_price": {
+				"type": "Text",
+				"config": {
+					"label": "Preview Promo Original Price"
+				}
+			},
+			"preview_promo_price": {
+				"type": "Text",
+				"config": {
+					"label": "Preview Promo Price"
+				}
+			},
+			"preview_alt_seat_placeholder": {
+				"type": "Text",
+				"config": {
+					"label": "Preview Alt Seat Placeholder"
+				}
+			},
+			"footer_notice1": {
+				"type": "Text",
+				"config": {
+					"label": "Footer Notice1"
+				}
+			},
+			"footer_notice2": {
+				"type": "Text",
+				"config": {
+					"label": "Footer Notice2"
+				}
+			},
+			"footer_reset_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Footer Reset Button Label"
+				}
+			},
+			"footer_confirm_button_label": {
+				"type": "Text",
+				"config": {
+					"label": "Footer Confirm Button Label"
+				}
+			},
+			"available": {
+				"type": "Text",
+				"config": {
+					"label": "Available"
+				}
+			},
+			"promo": {
+				"type": "Text",
+				"config": {
+					"label": "Promo"
+				}
+			},
+			"alt_seat": {
+				"type": "Text",
+				"config": {
+					"label": "Alt Seat"
+				}
+			},
+			"unavailable": {
+				"type": "Text",
+				"config": {
+					"label": "Unavailable"
+				}
+			},
+			"past": {
+				"type": "Text",
+				"config": {
+					"label": "Past"
+				}
+			}
+		}
+	}
+}

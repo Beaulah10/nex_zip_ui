@@ -1,0 +1,486 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "material-symbols/outlined.css";
+@import "material-symbols/rounded.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@source "../**/*.{ts,tsx}";
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--radius-sm: calc(var(--radius) * 0.6);
+	--radius-md: calc(var(--radius) * 0.8);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) * 1.4);
+	--radius-2xl: calc(var(--radius) * 1.8);
+	--breakpoint-xs: 390px;
+	--breakpoint-sm: 768px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+
+	/* ─── Primitive: Red ─── */
+	--color-red-50: var(--red-50);
+	--color-red-100: var(--red-100);
+	--color-red-200: var(--red-200);
+	--color-red-300: var(--red-300);
+	--color-red-400: var(--red-400);
+	--color-red-500: var(--red-500);
+	--color-red-600: var(--red-600);
+	--color-red-700: var(--red-700);
+	--color-red-800: var(--red-800);
+	--color-red-900: var(--red-900);
+	--color-red-950: var(--red-950);
+
+	/* ─── Primitive: Yellow ─── */
+	--color-yellow-50: var(--yellow-50);
+	--color-yellow-100: var(--yellow-100);
+	--color-yellow-200: var(--yellow-200);
+	--color-yellow-300: var(--yellow-300);
+	--color-yellow-400: var(--yellow-400);
+	--color-yellow-500: var(--yellow-500);
+	--color-yellow-600: var(--yellow-600);
+	--color-yellow-700: var(--yellow-700);
+	--color-yellow-800: var(--yellow-800);
+	--color-yellow-900: var(--yellow-900);
+	--color-yellow-950: var(--yellow-950);
+
+	/* ─── Primitive: Green ─── */
+	--color-green-50: var(--green-50);
+	--color-green-100: var(--green-100);
+	--color-green-200: var(--green-200);
+	--color-green-300: var(--green-300);
+	--color-green-400: var(--green-400);
+	--color-green-500: var(--green-500);
+	--color-green-600: var(--green-600);
+	--color-green-700: var(--green-700);
+	--color-green-800: var(--green-800);
+	--color-green-900: var(--green-900);
+	--color-green-950: var(--green-950);
+
+	/* ─── Primitive: Blue ─── */
+	--color-blue-50: var(--blue-50);
+	--color-blue-100: var(--blue-100);
+	--color-blue-200: var(--blue-200);
+	--color-blue-300: var(--blue-300);
+	--color-blue-400: var(--blue-400);
+	--color-blue-500: var(--blue-500);
+	--color-blue-600: var(--blue-600);
+	--color-blue-700: var(--blue-700);
+	--color-blue-800: var(--blue-800);
+	--color-blue-900: var(--blue-900);
+	--color-blue-950: var(--blue-950);
+
+	/* ─── Primitive: Gray ─── */
+	--color-gray-50: var(--gray-50);
+	--color-gray-100: var(--gray-100);
+	--color-gray-200: var(--gray-200);
+	--color-gray-300: var(--gray-300);
+	--color-gray-400: var(--gray-400);
+	--color-gray-500: var(--gray-500);
+	--color-gray-600: var(--gray-600);
+	--color-gray-700: var(--gray-700);
+	--color-gray-800: var(--gray-800);
+	--color-gray-900: var(--gray-900);
+	--color-gray-905: var(--gray-905);
+	--color-gray-950: var(--gray-950);
+
+	/* ─── Uncategorized ─── */
+	--color-black: var(--black);
+	--color-white: var(--white);
+
+	/* ─── Brand ─── */
+	--color-brand-trust-green: var(--brand-trust-green);
+	--color-brand-harmony-gray: var(--brand-harmony-gray);
+	--color-brand-japan-black: var(--brand-japan-black);
+	--color-brand-white: var(--brand-white);
+
+	/* ─── Semantic: Base ─── */
+	--color-base-50: var(--base-50);
+	--color-base-100: var(--base-100);
+	--color-base-200: var(--base-200);
+	--color-base-300: var(--base-300);
+	--color-base-400: var(--base-400);
+	--color-base-500: var(--base-500);
+	--color-base-600: var(--base-600);
+	--color-base-700: var(--base-700);
+	--color-base-800: var(--base-800);
+	--color-base-900: var(--base-900);
+	--color-base-950: var(--base-950);
+
+	/* ─── Semantic: Primary ─── */
+	--color-primary-50: var(--primary-50);
+	--color-primary-100: var(--primary-100);
+	--color-primary-200: var(--primary-200);
+	--color-primary-300: var(--primary-300);
+	--color-primary-400: var(--primary-400);
+	--color-primary-500: var(--primary-500);
+	--color-primary-600: var(--primary-600);
+	--color-primary-700: var(--primary-700);
+	--color-primary-800: var(--primary-800);
+	--color-primary-900: var(--primary-900);
+	--color-primary-950: var(--primary-950);
+
+	/* ─── Semantic: Secondary ─── */
+	--color-secondary-50: var(--secondary-50);
+	--color-secondary-100: var(--secondary-100);
+	--color-secondary-200: var(--secondary-200);
+	--color-secondary-300: var(--secondary-300);
+	--color-secondary-400: var(--secondary-400);
+	--color-secondary-500: var(--secondary-500);
+	--color-secondary-600: var(--secondary-600);
+	--color-secondary-700: var(--secondary-700);
+	--color-secondary-800: var(--secondary-800);
+	--color-secondary-900: var(--secondary-900);
+	--color-secondary-950: var(--secondary-950);
+
+	/* ─── Semantic: Info ─── */
+	--color-info-50: var(--info-50);
+	--color-info-100: var(--info-100);
+	--color-info-200: var(--info-200);
+	--color-info-300: var(--info-300);
+	--color-info-400: var(--info-400);
+	--color-info-500: var(--info-500);
+	--color-info-600: var(--info-600);
+	--color-info-700: var(--info-700);
+	--color-info-800: var(--info-800);
+	--color-info-900: var(--info-900);
+	--color-info-950: var(--info-950);
+
+	/* ─── Semantic: Success ─── */
+	--color-success-50: var(--success-50);
+	--color-success-100: var(--success-100);
+	--color-success-200: var(--success-200);
+	--color-success-300: var(--success-300);
+	--color-success-400: var(--success-400);
+	--color-success-500: var(--success-500);
+	--color-success-600: var(--success-600);
+	--color-success-700: var(--success-700);
+	--color-success-800: var(--success-800);
+	--color-success-900: var(--success-900);
+	--color-success-950: var(--success-950);
+
+	/* ─── Semantic: Warning ─── */
+	--color-warning-50: var(--warning-50);
+	--color-warning-100: var(--warning-100);
+	--color-warning-200: var(--warning-200);
+	--color-warning-300: var(--warning-300);
+	--color-warning-400: var(--warning-400);
+	--color-warning-500: var(--warning-500);
+	--color-warning-600: var(--warning-600);
+	--color-warning-700: var(--warning-700);
+	--color-warning-800: var(--warning-800);
+	--color-warning-900: var(--warning-900);
+	--color-warning-950: var(--warning-950);
+
+	/* ─── Semantic: Danger ─── */
+	--color-danger-50: var(--danger-50);
+	--color-danger-100: var(--danger-100);
+	--color-danger-200: var(--danger-200);
+	--color-danger-300: var(--danger-300);
+	--color-danger-400: var(--danger-400);
+	--color-danger-500: var(--danger-500);
+	--color-danger-600: var(--danger-600);
+	--color-danger-700: var(--danger-700);
+	--color-danger-800: var(--danger-800);
+	--color-danger-900: var(--danger-900);
+	--color-danger-950: var(--danger-950);
+
+	/* ─── Border Radius ─── */
+	--border-radius-rounded-none: var(--border-radius-rounded-none-value);
+	--border-radius-rounded-xs: var(--border-radius-rounded-xs-value);
+	--border-radius-rounded-sm: var(--border-radius-rounded-sm-value);
+	--border-radius-rounded-md: var(--border-radius-rounded-md-value);
+	--border-radius-rounded-lg: var(--border-radius-rounded-lg-value);
+	--border-radius-rounded-xl: var(--border-radius-rounded-xl-value);
+	--border-radius-rounded-2xl: var(--border-radius-rounded-2xl-value);
+	--border-radius-rounded-3xl: var(--border-radius-rounded-3xl-value);
+	--border-radius-rounded-full: var(--border-radius-rounded-full-value);
+
+	/* ─── Shadows ─── */
+	--shadow-none: none;
+	--shadow-xs: var(--shadow-xs-value);
+	--shadow-sm: var(--shadow-sm-value);
+	--shadow-md: var(--shadow-md-value);
+	--shadow-lg: var(--shadow-lg-value);
+	--shadow-xl: var(--shadow-xl-value);
+}
+
+:root {
+	--background: oklch(1 0 0);
+	--foreground: oklch(0.145 0 0);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.145 0 0);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.145 0 0);
+	--primary: oklch(0.205 0 0);
+	--primary-foreground: oklch(0.985 0 0);
+	--secondary: oklch(0.97 0 0);
+	--secondary-foreground: oklch(0.205 0 0);
+	--muted: oklch(0.97 0 0);
+	--muted-foreground: oklch(0.556 0 0);
+	--accent: oklch(0.97 0 0);
+	--accent-foreground: oklch(0.205 0 0);
+	--destructive: oklch(0.577 0.245 27.325);
+	--border: oklch(0.922 0 0);
+	--input: oklch(0.922 0 0);
+	--ring: oklch(0.708 0 0);
+	--radius: 0.5rem;
+
+	/* ─── Figma Input: Spacing tokens ─── */
+	--padding-p-1: 4px;
+	--padding-p-2: 8px;
+	--padding-p-3: 12px;
+	--padding-p-4: 16px;
+
+	/* ─── Figma Input: Typography tokens ─── */
+	--text-sm-medium-font-size: 14px;
+	--text-sm-medium-line-height: 24px;
+	--text-base-medium-font-size: 16px;
+	--text-base-medium-line-height: 24px;
+	--text-lg-medium-font-size: 18px;
+	--text-lg-medium-line-height: 28px;
+
+	/* ─── Figma Input: Icon size tokens ─── */
+	--icon-size-sm: 20px;
+	--icon-size-md: 24px;
+	--icon-size-lg: 30px;
+
+	/* ─── Primitive: Red ─── */
+	--red-50: #fdf2f2;
+	--red-100: #fde8e8;
+	--red-200: #fbd5d5;
+	--red-300: #f8b4b4;
+	--red-400: #f98080;
+	--red-500: #f05252;
+	--red-600: #e02424;
+	--red-700: #c81e1e;
+	--red-800: #9b1c1c;
+	--red-900: #771d1d;
+	--red-950: #460809;
+
+	/* ─── Primitive: Yellow ─── */
+	--yellow-50: #fdfdea;
+	--yellow-100: #fdf6b2;
+	--yellow-200: #fce96a;
+	--yellow-300: #faca15;
+	--yellow-400: #e3a008;
+	--yellow-500: #c27803;
+	--yellow-600: #9f580a;
+	--yellow-700: #8e4b10;
+	--yellow-800: #723b13;
+	--yellow-900: #633112;
+	--yellow-950: #432004;
+
+	/* ─── Primitive: Green (anchored: green-700 = #007057) ─── */
+	--green-50: #f2faf9;
+	--green-100: #ebf7f4;
+	--green-200: #d9f0ea;
+	--green-300: #b4e1d7;
+	--green-400: #6ec5b2;
+	--green-500: #009877;
+	--green-600: #008568;
+	--green-700: #007057;
+	--green-800: #00523f;
+	--green-900: #004737;
+	--green-950: #032e15;
+
+	/* ─── Primitive: Blue ─── */
+	--blue-50: #ebf5ff;
+	--blue-100: #e1effe;
+	--blue-200: #c3ddfd;
+	--blue-300: #a4cafe;
+	--blue-400: #76a9fa;
+	--blue-500: #3f83f8;
+	--blue-600: #1c64f2;
+	--blue-700: #1a56db;
+	--blue-800: #1e429f;
+	--blue-900: #233876;
+	--blue-950: #162456;
+
+	/* ─── Primitive: Gray (anchored: Figma Base tokens) ─── */
+	--gray-50: #f8fafa;
+	--gray-100: #f1f4f5;
+	--gray-200: #e3e8eb;
+	--gray-300: #c7d1d6;
+	--gray-400: #a5adb2;
+	--gray-500: #767b80;
+	--gray-600: #5c6064;
+	--gray-700: #494b4f;
+	--gray-800: #333437;
+	--gray-900: #252628;
+	--gray-905: #272726;
+	--gray-950: #030712;
+
+	/* ─── Uncategorized ─── */
+	--black: #000000;
+	--white: #ffffff;
+
+	/* ─── Brand ─── */
+	--brand-trust-green: #009877;
+	--brand-harmony-gray: #c7d1d6;
+	--brand-japan-black: #0d0d0f;
+	--brand-white: #ffffff;
+
+	/* ─── Semantic: Base (= Gray scale) ─── */
+	--base-50: #f8fafa;
+	--base-100: #f1f4f5;
+	--base-150: #e5e9eb;
+	--base-200: #e3e8eb;
+	--base-300: #c7d1d6;
+	--base-400: #a5adb2;
+	--base-500: #767b80;
+	--base-600: #5c6064;
+	--base-700: #494b4f;
+	--base-800: #333437;
+	--base-900: #252628;
+	--base-950: #030712;
+
+	/* ─── Semantic: Primary (= Green scale) ─── */
+	--primary-50: #f2faf9;
+	--primary-100: #ebf7f4;
+	--primary-200: #d9f0ea;
+	--primary-300: #b4e1d7;
+	--primary-400: #6ec5b2;
+	--primary-500: #009877;
+	--primary-550: #008c6e;
+	--primary-600: #008568;
+	--primary-700: #007057;
+	--primary-800: #00523f;
+	--primary-900: #004737;
+	--primary-950: #032e15;
+
+	/* ─── Semantic: Secondary (= Cool Gray / Slate) ─── */
+	--secondary-50: #f8fafa;
+	--secondary-100: #f1f4f5;
+	--secondary-200: #e3e8eb;
+	--secondary-300: #c7d1d6;
+	--secondary-400: #a5adb2;
+	--secondary-500: #767b80;
+	--secondary-600: #5c6064;
+	--secondary-700: #494b4f;
+	--secondary-800: #333437;
+	--secondary-900: #252628;
+	--secondary-950: #030712;
+
+	/* ─── Semantic: Info (= Blue scale) ─── */
+	--info-50: #f2faf9;
+	--info-100: #ebf7f4;
+	--info-200: #d9f0ea;
+	--info-300: #b4e1d7;
+	--info-400: #6ec5b2;
+	--info-500: #009877;
+	--info-600: #008568;
+	--info-700: #007057;
+	--info-800: #00523f;
+	--info-900: #004737;
+	--info-950: #032e15;
+
+	/* ─── Semantic: Success (= Blue scale) ─── */
+	--success-50: #ebf5ff;
+	--success-100: #e1effe;
+	--success-200: #c3ddfd;
+	--success-300: #a4cafe;
+	--success-400: #76a9fa;
+	--success-500: #3f83f8;
+	--success-600: #1c64f2;
+	--success-700: #1a56db;
+	--success-800: #1e429f;
+	--success-900: #233876;
+	--success-950: #162456;
+
+	/* ─── Semantic: Warning (= Yellow/Amber scale) ─── */
+	--warning-50: #fdfdea;
+	--warning-100: #fdf6b2;
+	--warning-200: #fce96a;
+	--warning-300: #faca15;
+	--warning-400: #e3a008;
+	--warning-500: #c27803;
+	--warning-600: #9f580a;
+	--warning-700: #8e4b10;
+	--warning-800: #723b13;
+	--warning-900: #633112;
+	--warning-950: #432004;
+
+	/* ─── Semantic: Danger (= Red scale) ─── */
+	--danger-50: #fdf2f2;
+	--danger-100: #fde8e8;
+	--danger-200: #fbd5d5;
+	--danger-300: #f8b4b4;
+	--danger-400: #f98080;
+	--danger-500: #f05252;
+	--danger-600: #e02424;
+	--danger-700: #c81e1e;
+	--danger-800: #9b1c1c;
+	--danger-900: #771d1d;
+	--danger-950: #460809;
+
+	/* ─── Border Radius ─── */
+	--border-radius-rounded-none-value: 0px;
+	--border-radius-rounded-xs-value: 2px;
+	--border-radius-rounded-sm-value: 4px;
+	--border-radius-rounded-md-value: 6px;
+	--border-radius-rounded-lg-value: 8px;
+	--border-radius-rounded-xl-value: 12px;
+	--border-radius-rounded-2xl-value: 16px;
+	--border-radius-rounded-3xl-value: 24px;
+	--border-radius-rounded-full-value: 9999px;
+
+	/* ─── Box Shadows ─── */
+	--shadow-xs-value: 0px 1px 2px rgba(3, 7, 18, 0.05);
+	--shadow-sm-value: 0px 1px 3px rgba(3, 7, 18, 0.1), 0px 1px 2px rgba(3, 7, 18, 0.06);
+	--shadow-md-value: 0px 4px 6px rgba(3, 7, 18, 0.1), 0px 2px 4px rgba(3, 7, 18, 0.06);
+	--shadow-lg-value: 0px 10px 15px rgba(3, 7, 18, 0.1), 0px 4px 6px rgba(3, 7, 18, 0.05);
+	--shadow-xl-value: 0px 20px 25px rgba(3, 7, 18, 0.1), 0px 8px 10px rgba(3, 7, 18, 0.04);
+}
+
+.dark {
+	--background: oklch(0.145 0 0);
+	--foreground: oklch(0.985 0 0);
+	--card: oklch(0.205 0 0);
+	--card-foreground: oklch(0.985 0 0);
+	--popover: oklch(0.205 0 0);
+	--popover-foreground: oklch(0.985 0 0);
+	--primary: oklch(0.922 0 0);
+	--primary-foreground: oklch(0.205 0 0);
+	--secondary: oklch(0.269 0 0);
+	--secondary-foreground: oklch(0.985 0 0);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--accent: oklch(0.269 0 0);
+	--accent-foreground: oklch(0.985 0 0);
+	--destructive: oklch(0.704 0.191 22.216);
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 15%);
+	--ring: oklch(0.556 0 0);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format": "custom",
+	"id": "app",
+	"json": {
+		"Main": {
+			"flight_search_title": {
+				"config": {
+					"label": "Flight Search Title"
+				},
+				"type": "Text"
+			}
+		}
+	},
+	"label": "App",
+	"repeatable": false,
+	"status": true
+}

@@ -1,0 +1,132 @@
+{
+	"format": "custom",
+	"id": "global_assets",
+	"json": {
+		"Main": {},
+		"Brand": {
+			"logo": {
+				"config": {
+					"constraint": {},
+					"label": "logo",
+					"thumbnails": []
+				},
+				"type": "Image"
+			}
+		},
+		"Flight Selection": {
+			"standard_cabin_desktop_image": {
+				"config": {
+					"constraint": {},
+					"label": "Standard Cabin Desktop Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"standard_cabin_mobile_image": {
+				"config": {
+					"constraint": {},
+					"label": "Standard Cabin Mobile Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"zipfullflat_cabin_desktop_image": {
+				"config": {
+					"constraint": {},
+					"label": "Zipfullflat Cabin Desktop Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"zipfullflat_cabin_mobile_image": {
+				"config": {
+					"constraint": {},
+					"label": "Zipfullflat Cabin Mobile Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			}
+		},
+		"Bundles": {},
+		"Customize": {
+			"baggage_image": {
+				"config": {
+					"constraint": {},
+					"label": "Baggage Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"inflight_meal": {
+				"config": {
+					"constraint": {},
+					"label": "Inflight meal",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"narita_lounge_image": {
+				"config": {
+					"constraint": {},
+					"label": "Narita Lounge Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"bangkok_lounge_image": {
+				"config": {
+					"constraint": {},
+					"label": "Bangkok Lounge Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"singapore_lounge_image": {
+				"config": {
+					"constraint": {},
+					"label": "Singapore Lounge Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"honolulu_lounge_image": {
+				"config": {
+					"constraint": {},
+					"label": "Honolulu Lounge Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"express_image": {
+				"config": {
+					"constraint": {},
+					"label": "Express Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"seat_image": {
+				"config": {
+					"constraint": {},
+					"label": "Seat Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			},
+			"transport_service_image": {
+				"config": {
+					"constraint": {},
+					"label": "Transport Service Image",
+					"thumbnails": []
+				},
+				"type": "Image"
+			}
+		},
+		"Extras": {},
+		"Customer Information": {},
+		"Insurance": {}
+	},
+	"label": "Global Assets",
+	"repeatable": false,
+	"status": true
+}

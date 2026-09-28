@@ -1,0 +1,23 @@
+{
+	"id": "customize",
+	"label": "Customize",
+	"format": "custom",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"lounge_title": {
+				"type": "Text",
+				"config": {
+					"label": "Lounge Title"
+				}
+			},
+			"lounge_description": {
+				"type": "Text",
+				"config": {
+					"label": "Lounge Description"
+				}
+			}
+		}
+	}
+}
