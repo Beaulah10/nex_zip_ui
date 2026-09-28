@@ -1,0 +1,99 @@
+{
+  "source": {
+    "figmaUrl": "https://www.figma.com/design/bKbmnibIMXEvV41PTvlQQR/IBE?node-id=16497-101924&m=dev",
+    "fileKey": "bKbmnibIMXEvV41PTvlQQR",
+    "scope": "selected-frame",
+    "selectedNodeId": "16497:101924",
+    "selectedNodeName": "IBE_WEB_1301_Non_Air_Ancillary_Page_PC_01"
+  },
+  "screens": [
+    {
+      "screenName": "IBE_WEB_1301_Non_Air_Ancillary_Page_PC_01",
+      "nodeId": "16497:101924",
+      "parentPage": "notAvailable",
+      "width": 1440,
+      "height": 2308,
+      "orientation": "portrait canvas",
+      "deviceCategory": "Desktop, explicit from frame name",
+      "screenshotPath": "docs/figma-inventory/screenshots/ibe-web-1301-non-air-ancillary-page-pc-01.png",
+      "childSectionCount": 2
+    }
+  ],
+  "layoutRegions": [
+    { "name": "Header", "nodeId": "26682:241514", "classification": "Header", "confidence": "high", "evidence": "Named Header instance; contains Navbar, Flight menu, and Stepper" },
+    { "name": "Stepper", "nodeId": "I26682:241514;25657:201420", "classification": "Primary navigation / progress stepper", "confidence": "high", "evidence": "Named Stepper with six Stepper/Parts/Item instances" },
+    { "name": "Frame 2610240", "nodeId": "16497:101927", "classification": "Main content", "confidence": "high", "evidence": "1024px content container with categories, product groups, and BookingFooter" },
+    { "name": "Categories", "nodeId": "21936:53077", "classification": "Filter/navigation pills", "confidence": "high", "evidence": "Named Categories; contains All and five category pills" },
+    { "name": "BookingFooter", "nodeId": "16497:101988", "classification": "Floating action area / booking footer", "confidence": "high", "evidence": "Named BookingFooter with Total Amount and Proceed button" }
+  ],
+  "components": {
+    "definitions": [
+      { "name": "Internal/Card", "nodeId": "notAvailable", "category": "Content / Card", "kind": "component definition referenced by instances", "variant": "notAvailable", "state": "default; one visible selected instance", "dimensions": { "width": 198, "height": 188 }, "reuseCount": 21, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Anc/Inflight", "nodeId": "11925:66993", "category": "Content / Image", "kind": "component definition", "variant": "Desktop", "state": "1", "dimensions": { "width": 176, "height": 112 }, "reuseCount": 21, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Header", "nodeId": "26682:241514", "category": "Navigation / Header", "kind": "component instance", "variant": "notAvailable", "state": "notAvailable", "dimensions": { "width": 1440, "height": 340 }, "reuseCount": 1, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Categories", "nodeId": "21936:53077", "category": "Navigation / Tab bar", "kind": "component instance", "variant": "notAvailable", "state": "All selected", "dimensions": { "width": 1024, "height": 88 }, "reuseCount": 1, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Heading", "nodeId": "16497:101945", "category": "Content / Heading", "kind": "component instance", "variant": "notAvailable", "state": "default", "dimensions": { "width": 1024, "height": 28 }, "reuseCount": 5, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Stepper", "nodeId": "28407:208196", "category": "Navigation / Stepper", "kind": "component definition referenced by instances", "variant": "notAvailable", "state": "mixed completed/current/upcoming", "dimensions": { "width": 1024, "height": "notAvailable" }, "reuseCount": 1, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "Button", "nodeId": "10390:12942", "category": "Actions / Button", "kind": "component definition referenced by instances", "variant": "contained/default", "state": "default", "dimensions": { "width": 256, "height": "notAvailable" }, "reuseCount": 2, "codeConnect": null, "confidence": "high", "reviewRequired": false },
+      { "name": "BookingFooter", "nodeId": "16497:101988", "category": "Actions / Booking footer", "kind": "component instance", "variant": "notAvailable", "state": "default", "dimensions": { "width": 1024, "height": 52 }, "reuseCount": 1, "codeConnect": null, "confidence": "high", "reviewRequired": false }
+    ],
+    "instances": [
+      { "name": "Internal/Card", "nodeIds": ["16497:101947", "16497:101948", "16497:101949", "16497:101950", "16497:101951", "16497:101960", "16497:101964", "16497:101965", "22005:207217", "22005:207218", "22005:207444", "16497:101975", "16497:101976", "16497:101977", "16497:101978", "16497:101979", "16497:101983", "16497:101984", "16497:101985", "16497:101986", "16497:101987"], "count": 21, "parentRegion": "Frame 2147225488", "dimensions": { "width": 198, "height": 188 } },
+      { "name": "Heading", "nodeIds": ["16497:101945", "16497:101959", "16497:101962", "16497:101973", "16497:101981"], "count": 5, "parentRegion": "Frame 2147225488", "dimensions": { "height": 28 } },
+      { "name": "Stepper/Parts/Item", "nodeIds": ["I26682:241514;25657:201420;223:50436", "I26682:241514;25657:201420;223:50437", "I26682:241514;25657:201420;223:50438", "I26682:241514;25657:201420;223:50439", "I26682:241514;25657:201420;223:50440", "I26682:241514;25657:201420;223:50441"], "count": 6, "parentRegion": "Stepper", "dimensions": { "width": "flexible", "height": "notAvailable" } },
+      { "name": "Categories/Internal/categories", "nodeIds": ["I21936:53077;21936:52983", "I21936:53077;21936:52984", "I21936:53077;21936:52986", "I21936:53077;21936:52987", "I21936:53077;21936:52989", "I21936:53077;21936:52990", "I21936:53077;21936:52991"], "count": 7, "parentRegion": "Categories", "dimensions": { "height": "notAvailable", "borderRadius": 9999 } },
+      { "name": "Radio_check", "nodeIds": ["I16497:101964;10008:18372"], "count": 1, "parentRegion": "Food & Souvenirs", "dimensions": { "width": 20, "height": 20 }, "state": "selected" }
+    ]
+  },
+  "contentGroups": [
+    { "name": "Special offers", "nodeId": "16497:101944", "cardCount": 5, "cardNodeIds": ["16497:101947", "16497:101948", "16497:101949", "16497:101950", "16497:101951"] },
+    { "name": "Amenities", "nodeId": "16497:101958", "cardCount": 2, "cardNodeIds": ["16497:101960", "22005:207444"] },
+    { "name": "Food & Souvenirs", "nodeId": "16497:101961", "cardCount": 2, "cardNodeIds": ["16497:101964", "16497:101965"] },
+    { "name": "Snacks & Souvenirs", "nodeId": "22005:207214", "cardCount": 2, "cardNodeIds": ["22005:207217", "22005:207218"] },
+    { "name": "Clothes & Cosmetics", "nodeId": "16497:101972", "cardCount": 5, "cardNodeIds": ["16497:101975", "16497:101976", "16497:101977", "16497:101978", "16497:101979"] },
+    { "name": "Others", "nodeId": "16497:101980", "cardCount": 5, "cardNodeIds": ["16497:101983", "16497:101984", "16497:101985", "16497:101986", "16497:101987"] }
+  ],
+  "states": [
+    { "nodeId": "I21936:53077;21936:52983", "name": "All", "state": "selected", "evidence": "green background and green border" },
+    { "nodeId": "16497:101964", "name": "microwavable rice（pack of 12）", "state": "selected", "evidence": "Radio_check instance with green background and check icon" },
+    { "nodeId": "I26682:241514;25657:201420;223:50436", "name": "Select Flights", "state": "completed", "evidence": "check_circle" },
+    { "nodeId": "I26682:241514;25657:201420;223:50437", "name": "Outbound Options", "state": "current", "evidence": "radio_button_checked in primary green" },
+    { "nodeId": "I26682:241514;25657:201420;223:50438", "name": "Inbound Options", "state": "upcoming", "evidence": "disabled gray step icon" },
+    { "nodeId": "I26682:241514;25657:201420;223:50439", "name": "Passenger Details", "state": "upcoming", "evidence": "disabled gray step icon" },
+    { "nodeId": "I26682:241514;25657:201420;223:50440", "name": "Insurance", "state": "upcoming", "evidence": "disabled gray step icon" },
+    { "nodeId": "I26682:241514;25657:201420;223:50441", "name": "Review & Confirm", "state": "upcoming", "evidence": "disabled gray step icon" },
+    { "nodeId": "I26682:241514;25657:201420;223:50444", "name": "Payment", "state": "upcoming", "evidence": "disabled gray step icon" }
+  ],
+  "assets": [
+    { "name": "ZIPAIR logo", "nodeId": "18:1192", "assetType": "SVG", "source": "Figma MCP temporary asset URL in design context", "localPath": "notAvailable" },
+    { "name": "Product images", "nodeIds": ["I16497:101947;9522:16325", "I16497:101948;9107:177492;9107:177332", "I16497:101949;9107:177492;9107:177334", "I16497:101950;9107:177492;9107:177336", "I16497:101951;9107:177492;9107:177340", "I16497:101960;9107:177492;9107:177364", "I16497:101964;9107:177492;9107:177366", "I16497:101965;9107:177492;9107:177368", "I22005:207217;9107:177492;9107:177370", "I22005:207218;9107:177492;9107:177372", "I22005:207444;9107:177492;9107:177374", "I16497:101975;9107:177492;9107:177376", "I16497:101976;9107:177492;9107:177378", "I16497:101977;9107:177492;9107:177380", "I16497:101978;9107:177492;9107:177382", "I16497:101979;9107:177492;9107:177384", "I16497:101983;9107:177492;9107:177386", "I16497:101984;9107:177492;9107:177388", "I16497:101985;9107:177492;9107:177392", "I16497:101986;9107:177492;9107:177394", "I16497:101987;9107:177492;9107:177396"], "assetType": "PNG", "localPath": "notAvailable" }
+  ],
+  "accessibility": {
+    "observations": [
+      "Visible text uses Noto Sans and Material Symbols Rounded for icons.",
+      "The visual stepper communicates completed, current, and upcoming states by icon/color.",
+      "Product image nodes have empty alt values in the returned reference code.",
+      "Interactive semantics, accessible names, keyboard order, and focus behavior are not available from the extracted design data."
+    ],
+    "reviewRequired": ["Confirm accessible names and keyboard behavior for category pills, product cards, selected Radio_check, Summary control, and Proceed button."]
+  },
+  "prototype": "notAvailable",
+  "responsiveVariants": "notAvailable; only Desktop frame selected",
+  "reviewRequired": [
+    "Code Connect map is empty for the selected scope.",
+    "The page's parent Figma page name is not included in the metadata response.",
+    "The unnamed continuation frame 22005:207442 is represented as a product-card continuation under the extracted hierarchy; its semantic group label is not explicit in metadata.",
+    "Exact dimensions for some component definitions are not returned in the sparse hierarchy and are marked notAvailable rather than inferred."
+  ],
+  "validation": {
+    "metadataScreenCount": 1,
+    "processedScreenCount": 1,
+    "cardInstanceCount": 21,
+    "headingInstanceCount": 5,
+    "stepperItemCount": 7,
+    "categoryPillCount": 7,
+    "screenshotWidth": 1440,
+    "screenshotHeight": 2308,
+    "countsValidatedAgainst": "metadata hierarchy and detailed design context"
+  }
+}
