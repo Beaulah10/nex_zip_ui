@@ -1,0 +1,22 @@
+C:\Users\1800883\Desktop\Innovation\nex_zip_ui\agents
+
+i have the agents in the above path and C:\Users\1800883\Desktop\Innovation\nex_zip_ui\figma-inventory this path we have the figma json of [http://localhost:3000/booking/en/extras/outbound](vscode-file://vscode-app/c:/Users/1800883/AppData/Local/Programs/Microsoft%20VS%20Code/8a7abeba6e/resources/app/out/vs/code/electron-browser/workbench/workbench.html) this page also figma screenshots all are provided now I want to use this for comparision of figma properties along the developed screens and I am not aware of the agents code nothing can u go through all and guide me how to set it up I also need to increase the performance of the agents can u help me with that as well?
+
+
+PRISMIC_REPOSITORY_NAME=zipair-uat
+PRISMIC_ACCESS_TOKEN=MC5hbzBvQnhFQUFDZ0FMeHJf.XO-_vT1J77-977-9HBHvv70077-9DO-_vRXvv71q77-9JF1c77-9GQnvv70ND--_vQbvv73vv71uEQ
+LABEL_SOURCE=local
+PRISMIC_WRITE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InppcGFpci1kZXYtN2UwYWYzNDgtNjgxZS00YjA3LWIyMzMtOWY1ZjExOGRjYmI5XzYiLCJkYXRlIjoxNzg0MTI1ODg4LCJkb21haW4iOiJ6aXBhaXItZGV2IiwiYXBwTmFtZSI6IkRFViBNaWdyYXRpb24iLCJpYXQiOjE3ODQxMjU4ODh9.ni8n1St6Aq5r-0m7psegGs8EJZkR-YT1DM91UiwcgDw
+IBE_PRISMIC_DOCUMENT_TYPE=ibe
+TOP_DEBUG_LABEL_FLOW=false
+IBE_DEBUG_LABEL_FLOW=false
+BACKEND_API_BASE_URL=https://a7rp603gfj.execute-api.ap-northeast-1.amazonaws.com/dev-a
+NODE_TLS_REJECT_UNAUTHORIZED=0
+PRISMIC_MIGRATION_SOURCE_REPOSITORY_NAME=zipair-dev
+PRISMIC_MIGRATION_SOURCE_ACCESS_TOKEN=MC5hbGVhdnhNQUFDZ0ExUnFI.77-977-9Ee-_vRDvv70b77-9HQnvv73vv70R77-977-9HWl877-977-977-9cQzvv70JS--_vWbvv70377-977-9
+PRISMIC_MIGRATION_TARGET_REPOSITORY_NAME=zipair-sit
+PRISMIC_MIGRATION_TARGET_ACCESS_TOKEN=MC5hbk0wd2hJQUFDa0FfZnZ5.GCEW77-9GBhTJu-_ve-_vUY877-9TO-_vX0aPe-_vWVZNCVk77-977-977-977-977-9ZT5S
+PRISMIC_MIGRATION_TARGET_WRITE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InppcGFpci1zaXQtMmQ4M2M4OTctNDI5MS00ODg2LWI4ZjItMTQ3ODNlNWJkOWZiXzYiLCJkYXRlIjoxNzg1OTM1MDY0LCJkb21haW4iOiJ6aXBhaXItc2l0IiwiYXBwTmFtZSI6IlNJVCBNaWdyYXRpb24iLCJpYXQiOjE3ODU5MzUwNjR9.vRZdiR07oCrkFCSMUIGNB0xjI6IA4wcABNdAfaHnZ3M
+PRISMIC_MIGRATION_STRATEGY=all
+PRISMIC_MIGRATION_LANG=en-us
+NEXT_PUBLIC_ARKOSE_PUBLIC_KEY=B3580934-86C2-4263-8C80-808547547B8A
