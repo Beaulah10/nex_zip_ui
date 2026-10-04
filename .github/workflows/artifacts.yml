@@ -123,7 +123,7 @@ jobs:
           echo "AWS_CODEARTIFACT_DOMAIN: ${{ vars.AWS_CODEARTIFACT_DOMAIN }}"
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ vars.AWS_OIDC_ROLE_ARN }}
           aws-region: ${{ vars.NEXUZ_AWS_REGION }}
