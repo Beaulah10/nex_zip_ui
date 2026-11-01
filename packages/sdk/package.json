@@ -24,7 +24,7 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@openapitools/openapi-generator-cli": "^2.39.0",
+		"@openapitools/openapi-generator-cli": "^2.42.0",
 		"@repo/typescript-config": "workspace:*",
 		"typescript": "^5.9.3"
 	}
